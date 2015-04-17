@@ -14,15 +14,20 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (checkCredentials()) {
-            self.performSegueWithIdentifier("login", sender: self)
-        }
+//        if (checkCredentials()) {
+//            self.performSegueWithIdentifier("login", sender: self)
+//        }
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.navigationBarHidden = false
     }
     
     @IBAction func login(sender: UIButton) {
@@ -38,6 +43,5 @@ class LoginViewController: UIViewController {
         }
         return false
     }
-    
 }
 
