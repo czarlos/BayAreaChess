@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		810AA73C1AD5DCA100E8FF25 /* SF.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810AA73B1AD5DCA100E8FF25 /* SF.jpg */; };
+		810AA73E1AD6501100E8FF25 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810AA73D1AD6501100E8FF25 /* NavigationController.swift */; };
+		810AA7401AD7741B00E8FF25 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810AA73F1AD7741B00E8FF25 /* TextField.swift */; };
+		810AA7421AD78C9200E8FF25 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810AA7411AD78C9200E8FF25 /* InitialViewController.swift */; };
+		810AA7441AD7995300E8FF25 /* thebay.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810AA7431AD7995300E8FF25 /* thebay.jpg */; };
+		810AA7461AD79A8600E8FF25 /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810AA7451AD79A8600E8FF25 /* sample.jpg */; };
 		815327591AD5B01C00D8D230 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815327581AD5B01C00D8D230 /* AppDelegate.swift */; };
 		8153275B1AD5B01C00D8D230 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8153275A1AD5B01C00D8D230 /* FirstViewController.swift */; };
 		8153275D1AD5B01C00D8D230 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8153275C1AD5B01C00D8D230 /* SecondViewController.swift */; };
@@ -14,6 +20,7 @@
 		815327621AD5B01C00D8D230 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815327611AD5B01C00D8D230 /* Images.xcassets */; };
 		815327651AD5B01C00D8D230 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 815327631AD5B01C00D8D230 /* LaunchScreen.xib */; };
 		815327711AD5B01C00D8D230 /* BayAreaChessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815327701AD5B01C00D8D230 /* BayAreaChessTests.swift */; };
+		8153277B1AD5B8EA00D8D230 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8153277A1AD5B8EA00D8D230 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		810AA73B1AD5DCA100E8FF25 /* SF.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SF.jpg; sourceTree = "<group>"; };
+		810AA73D1AD6501100E8FF25 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		810AA73F1AD7741B00E8FF25 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		810AA7411AD78C9200E8FF25 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		810AA7431AD7995300E8FF25 /* thebay.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thebay.jpg; sourceTree = "<group>"; };
+		810AA7451AD79A8600E8FF25 /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
 		815327531AD5B01C00D8D230 /* BayAreaChess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BayAreaChess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		815327571AD5B01C00D8D230 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		815327581AD5B01C00D8D230 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +51,7 @@
 		8153276A1AD5B01C00D8D230 /* BayAreaChessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BayAreaChessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8153276F1AD5B01C00D8D230 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		815327701AD5B01C00D8D230 /* BayAreaChessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BayAreaChessTests.swift; sourceTree = "<group>"; };
+		8153277A1AD5B8EA00D8D230 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +93,20 @@
 		815327551AD5B01C00D8D230 /* BayAreaChess */ = {
 			isa = PBXGroup;
 			children = (
+				810AA7451AD79A8600E8FF25 /* sample.jpg */,
+				810AA7431AD7995300E8FF25 /* thebay.jpg */,
+				810AA73B1AD5DCA100E8FF25 /* SF.jpg */,
 				815327581AD5B01C00D8D230 /* AppDelegate.swift */,
 				8153275A1AD5B01C00D8D230 /* FirstViewController.swift */,
 				8153275C1AD5B01C00D8D230 /* SecondViewController.swift */,
 				8153275E1AD5B01C00D8D230 /* Main.storyboard */,
+				810AA73D1AD6501100E8FF25 /* NavigationController.swift */,
 				815327611AD5B01C00D8D230 /* Images.xcassets */,
 				815327631AD5B01C00D8D230 /* LaunchScreen.xib */,
 				815327561AD5B01C00D8D230 /* Supporting Files */,
+				8153277A1AD5B8EA00D8D230 /* LoginViewController.swift */,
+				810AA73F1AD7741B00E8FF25 /* TextField.swift */,
+				810AA7411AD78C9200E8FF25 /* InitialViewController.swift */,
 			);
 			path = BayAreaChess;
 			sourceTree = "<group>";
@@ -197,6 +218,9 @@
 			files = (
 				815327601AD5B01C00D8D230 /* Main.storyboard in Resources */,
 				815327651AD5B01C00D8D230 /* LaunchScreen.xib in Resources */,
+				810AA73C1AD5DCA100E8FF25 /* SF.jpg in Resources */,
+				810AA7441AD7995300E8FF25 /* thebay.jpg in Resources */,
+				810AA7461AD79A8600E8FF25 /* sample.jpg in Resources */,
 				815327621AD5B01C00D8D230 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,7 +239,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8153277B1AD5B8EA00D8D230 /* LoginViewController.swift in Sources */,
+				810AA7421AD78C9200E8FF25 /* InitialViewController.swift in Sources */,
 				8153275D1AD5B01C00D8D230 /* SecondViewController.swift in Sources */,
+				810AA73E1AD6501100E8FF25 /* NavigationController.swift in Sources */,
+				810AA7401AD7741B00E8FF25 /* TextField.swift in Sources */,
 				815327591AD5B01C00D8D230 /* AppDelegate.swift in Sources */,
 				8153275B1AD5B01C00D8D230 /* FirstViewController.swift in Sources */,
 			);
@@ -411,6 +439,7 @@
 				815327761AD5B01C00D8D230 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		815327771AD5B01C00D8D230 /* Build configuration list for PBXNativeTarget "BayAreaChessTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +448,7 @@
 				815327791AD5B01C00D8D230 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

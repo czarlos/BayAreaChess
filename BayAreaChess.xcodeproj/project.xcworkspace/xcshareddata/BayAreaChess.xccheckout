@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>07E39EC5-2F67-4395-A830-EB489BBA885E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BayAreaChess</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>11AB8CD5FD39345FAC1357B6437855A532106F2B</key>
+		<string>github.com:czarlos/BayAreaChess.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BayAreaChess.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>11AB8CD5FD39345FAC1357B6437855A532106F2B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:czarlos/BayAreaChess.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>11AB8CD5FD39345FAC1357B6437855A532106F2B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>11AB8CD5FD39345FAC1357B6437855A532106F2B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BayAreaChess</string>
+		</dict>
+	</array>
+</dict>
+</plist>
