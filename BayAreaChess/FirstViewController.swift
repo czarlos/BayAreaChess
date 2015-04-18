@@ -31,4 +31,3 @@ class FirstViewController: UIViewController {
         self.performSegueWithIdentifier("logout", sender: self)
     }
 }
-
