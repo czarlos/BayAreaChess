@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D130a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cLl-Dr-A2e">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,13 +18,20 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thebay.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="6it-UB-Nqh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thebay.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="6it-UB-Nqh">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="5wn-86-pGo"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sample.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="NtI-31-MBa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="NtI-31-MBa">
                                 <rect key="frame" x="66" y="124" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NtI-31-MBa" secondAttribute="height" multiplier="1:1" id="F7g-tL-WSP"/>
+                                    <constraint firstAttribute="width" constant="75" id="KU1-vc-gTu"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="John Snow" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSa-5T-wfQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="John Snow" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSa-5T-wfQ">
                                 <rect key="frame" x="66" y="207" width="86" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -35,8 +43,12 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHj-qP-A4T">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHj-qP-A4T">
                                 <rect key="frame" x="408" y="208" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Vsi-Os-uwy"/>
+                                    <constraint firstAttribute="width" constant="20" id="nMF-kO-23x"/>
+                                </constraints>
                                 <state key="normal" image="glyphicons-137-cogwheel.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -46,6 +58,15 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6it-UB-Nqh" secondAttribute="trailing" id="0Zy-Om-Snn"/>
+                            <constraint firstItem="mSa-5T-wfQ" firstAttribute="top" secondItem="6it-UB-Nqh" secondAttribute="bottom" constant="37" id="4tD-LM-SW2"/>
+                            <constraint firstItem="NtI-31-MBa" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="104" id="ARZ-1h-wXO"/>
+                            <constraint firstItem="6it-UB-Nqh" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="QLt-Vh-U7L"/>
+                            <constraint firstItem="NtI-31-MBa" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="50" id="lLG-oS-Aiv"/>
+                            <constraint firstItem="6it-UB-Nqh" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="voZ-iq-TS9"/>
+                            <constraint firstAttribute="trailing" secondItem="vHj-qP-A4T" secondAttribute="trailing" constant="172" id="yiV-ET-xRZ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <toolbarItems/>
@@ -87,10 +108,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qdo-sE-tIj" firstAttribute="bottom" secondItem="Djb-ko-YwX" secondAttribute="top" id="EfQ-H6-43b"/>
-                            <constraint firstItem="qdo-sE-tIj" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="-64" id="Mpa-Lo-o6K"/>
-                            <constraint firstAttribute="trailing" secondItem="qdo-sE-tIj" secondAttribute="trailing" id="P23-dQ-e7B"/>
-                            <constraint firstItem="qdo-sE-tIj" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="ZgY-qf-5w2"/>
+                            <constraint firstAttribute="trailing" secondItem="qdo-sE-tIj" secondAttribute="trailing" id="5jo-eh-gia"/>
+                            <constraint firstItem="qdo-sE-tIj" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="NKI-Gu-QG3"/>
+                            <constraint firstItem="qdo-sE-tIj" firstAttribute="bottom" secondItem="Djb-ko-YwX" secondAttribute="top" id="fU7-3r-63y"/>
+                            <constraint firstItem="qdo-sE-tIj" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="gNT-R3-dac"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
