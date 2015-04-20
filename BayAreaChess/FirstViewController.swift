@@ -22,7 +22,7 @@ class FirstViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
-        self.navigationController?.navigationBarHidden = true
+        self.navigationController?.navigationBar.hidden = true
     }
     
     @IBAction func logout (sender: UIButton) {

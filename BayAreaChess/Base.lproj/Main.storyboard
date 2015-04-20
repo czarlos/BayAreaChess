@@ -17,52 +17,26 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thebay.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="6it-UB-Nqh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thebay.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="6it-UB-Nqh">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="170"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="170" id="DrF-Mh-h9p"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="170" id="Oa0-8N-Wgk"/>
-                                    <constraint firstAttribute="width" constant="600" id="eWf-p1-GTG"/>
-                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="NtI-31-MBa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sample.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="NtI-31-MBa">
                                 <rect key="frame" x="66" y="124" width="75" height="75"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="Y0T-MX-D0I"/>
-                                    <constraint firstAttribute="width" constant="75" id="ndb-JT-v2R"/>
-                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Snow" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSa-5T-wfQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="John Snow" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSa-5T-wfQ">
                                 <rect key="frame" x="66" y="207" width="86" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@king_snow" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Na5-nT-OnF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="@king_snow" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Na5-nT-OnF">
                                 <rect key="frame" x="66" y="226" width="80" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="vJj-Eh-bfe">
-                                <rect key="frame" x="0.0" y="276" width="600" height="280"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ggx-fn-JEC">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ggx-fn-JEC" id="yF3-Ac-UAg">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHj-qP-A4T">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHj-qP-A4T">
                                 <rect key="frame" x="408" y="208" width="20" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="L47-Dt-9RZ"/>
-                                    <constraint firstAttribute="width" constant="20" id="hPg-Me-EJc"/>
-                                </constraints>
                                 <state key="normal" image="glyphicons-137-cogwheel.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -72,28 +46,11 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="6it-UB-Nqh" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="6Vm-rx-PHA"/>
-                            <constraint firstItem="NtI-31-MBa" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="50" id="8bg-in-i83"/>
-                            <constraint firstItem="Na5-nT-OnF" firstAttribute="top" secondItem="NtI-31-MBa" secondAttribute="bottom" constant="27" id="FtW-Y8-SdR"/>
-                            <constraint firstItem="mSa-5T-wfQ" firstAttribute="top" secondItem="NtI-31-MBa" secondAttribute="bottom" constant="8" id="IDV-MH-3xE"/>
-                            <constraint firstAttribute="trailing" secondItem="6it-UB-Nqh" secondAttribute="trailing" id="KBo-Ot-R2h"/>
-                            <constraint firstItem="NtI-31-MBa" firstAttribute="leading" secondItem="mSa-5T-wfQ" secondAttribute="leading" id="S8i-0d-1GC"/>
-                            <constraint firstItem="vJj-Eh-bfe" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" id="TFo-aj-j44"/>
-                            <constraint firstItem="vJj-Eh-bfe" firstAttribute="leading" secondItem="6it-UB-Nqh" secondAttribute="leading" id="Z6w-eK-frD"/>
-                            <constraint firstItem="vHj-qP-A4T" firstAttribute="centerX" secondItem="6it-UB-Nqh" secondAttribute="centerX" constant="118" id="Zyf-Cu-1iO"/>
-                            <constraint firstItem="Na5-nT-OnF" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="50" id="bEW-ws-PU4"/>
-                            <constraint firstItem="6it-UB-Nqh" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="dLw-Y7-eb3"/>
-                            <constraint firstItem="vJj-Eh-bfe" firstAttribute="trailing" secondItem="6it-UB-Nqh" secondAttribute="trailing" id="dQU-2B-P66"/>
-                            <constraint firstItem="Na5-nT-OnF" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="50" id="gLq-Ig-JWD"/>
-                            <constraint firstItem="NtI-31-MBa" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="104" id="kSi-bN-1A3"/>
-                            <constraint firstItem="vJj-Eh-bfe" firstAttribute="top" secondItem="Na5-nT-OnF" secondAttribute="bottom" constant="33" id="mjK-cX-lW7"/>
-                            <constraint firstItem="vHj-qP-A4T" firstAttribute="top" secondItem="6it-UB-Nqh" secondAttribute="bottom" constant="38" id="nmX-0M-uIN"/>
-                            <constraint firstItem="mSa-5T-wfQ" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="50" id="zZw-xj-itH"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="XN7-JH-Pfs" kind="show" identifier="logout" id="Mz1-UM-R8r"/>
                     </connections>
@@ -139,6 +96,7 @@
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
                     <navigationItem key="navigationItem" title="Tournaments" id="8BI-QS-h82"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -581,7 +539,7 @@
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -606,6 +564,6 @@
         <image name="thebay.jpg" width="2592" height="736"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5WB-fr-65o"/>
+        <segue reference="Mz1-UM-R8r"/>
     </inferredMetricsTieBreakers>
 </document>
