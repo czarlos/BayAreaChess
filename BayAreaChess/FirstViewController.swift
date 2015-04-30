@@ -25,6 +25,11 @@ class FirstViewController: UIViewController {
         self.navigationController?.navigationBar.hidden = true
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(true)
+        self.navigationController?.navigationBar.hidden = false
+    }
+    
     @IBAction func logout (sender: UIButton) {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.removeObjectForKey("carlos")

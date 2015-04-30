@@ -83,6 +83,7 @@
         <!--Tournaments-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="BayAreaChess" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
@@ -91,37 +92,45 @@
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qdo-sE-tIj">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KaD-Kc-ded">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KaD-Kc-ded" id="Y5i-5U-bSb">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="qdo-sE-tIj" secondAttribute="trailing" id="5jo-eh-gia"/>
-                            <constraint firstItem="qdo-sE-tIj" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="NKI-Gu-QG3"/>
-                            <constraint firstItem="qdo-sE-tIj" firstAttribute="bottom" secondItem="Djb-ko-YwX" secondAttribute="top" id="fU7-3r-63y"/>
-                            <constraint firstItem="qdo-sE-tIj" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="gNT-R3-dac"/>
-                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Second" image="F016657A-A4F7-46EB-945E-7D691E2784C3" id="cPa-gy-q4n"/>
                     <navigationItem key="navigationItem" title="Tournaments" id="8BI-QS-h82"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1562" y="360"/>
+            <point key="canvasLocation" x="1560" y="349"/>
+        </scene>
+        <!--Hello-->
+        <scene sceneID="5b6-9H-cfR">
+            <objects>
+                <tableViewController id="o56-kC-EJ2" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="pq1-Kh-gBd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ICG-lB-khT">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ICG-lB-khT" id="nQn-h9-ciM">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="o56-kC-EJ2" id="Emd-7m-Ihd"/>
+                            <outlet property="delegate" destination="o56-kC-EJ2" id="JBR-bv-0Pj"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" image="glyphicons-38-coins.png" id="TaS-1U-LDV" userLabel="Third"/>
+                    <navigationItem key="navigationItem" title="Hello" id="zkZ-EW-0Ty"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ctG-Rx-0p7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1560" y="1170"/>
         </scene>
         <!--Landing View Controller-->
         <scene sceneID="DXL-J5-xB2">
@@ -369,8 +378,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q0r-uN-kQj" customClass="TextField" customModule="BayAreaChess" customModuleProvider="target">
-                                <rect key="frame" x="16" y="28" width="568" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q0r-uN-kQj" customClass="TextField" customModule="BayAreaChess" customModuleProvider="target">
+                                <rect key="frame" x="16" y="72" width="568" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="h1m-5q-hXD"/>
                                 </constraints>
@@ -378,8 +387,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RF8-Ps-bJj" customClass="TextField" customModule="BayAreaChess" customModuleProvider="target">
-                                <rect key="frame" x="16" y="66" width="568" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RF8-Ps-bJj" customClass="TextField" customModule="BayAreaChess" customModuleProvider="target">
+                                <rect key="frame" x="16" y="110" width="568" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="oX1-rX-BLG"/>
                                 </constraints>
@@ -387,8 +396,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Js-Ce-tzy" customClass="TextField" customModule="BayAreaChess" customModuleProvider="target">
-                                <rect key="frame" x="16" y="104" width="568" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Js-Ce-tzy" customClass="TextField" customModule="BayAreaChess" customModuleProvider="target">
+                                <rect key="frame" x="16" y="148" width="568" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="gVk-Fs-NYs"/>
                                 </constraints>
@@ -396,8 +405,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="79Q-Ad-c9W" customClass="TextField" customModule="BayAreaChess" customModuleProvider="target">
-                                <rect key="frame" x="16" y="142" width="568" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="79Q-Ad-c9W" customClass="TextField" customModule="BayAreaChess" customModuleProvider="target">
+                                <rect key="frame" x="16" y="186" width="568" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="G06-Yl-sK5"/>
                                 </constraints>
@@ -405,8 +414,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2H7-kC-89i" customClass="TextField" customModule="BayAreaChess" customModuleProvider="target">
-                                <rect key="frame" x="16" y="182" width="568" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2H7-kC-89i" customClass="TextField" customModule="BayAreaChess" customModuleProvider="target">
+                                <rect key="frame" x="16" y="226" width="568" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="QJ3-y2-ffL"/>
                                 </constraints>
@@ -414,8 +423,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wBK-Wk-e8x" customClass="TextField" customModule="BayAreaChess" customModuleProvider="target">
-                                <rect key="frame" x="16" y="224" width="568" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wBK-Wk-e8x" customClass="TextField" customModule="BayAreaChess" customModuleProvider="target">
+                                <rect key="frame" x="16" y="268" width="568" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="q7L-k6-QGL"/>
                                 </constraints>
@@ -423,14 +432,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="By signing up, you agree to the Terms of Service and Privacy Policy." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fq2-r5-0RN">
-                                <rect key="frame" x="16" y="316" width="568" height="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By signing up, you agree to the Terms of Service and Privacy Policy." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fq2-r5-0RN">
+                                <rect key="frame" x="16" y="360" width="568" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u55-Le-w1N">
-                                <rect key="frame" x="16" y="272" width="568" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u55-Le-w1N">
+                                <rect key="frame" x="16" y="316" width="568" height="30"/>
                                 <color key="backgroundColor" red="0.13387634230000001" green="0.37045183139999999" blue="0.61832668140000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="moG-Ig-yqf"/>
@@ -560,7 +569,7 @@
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -569,6 +578,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="o56-kC-EJ2" kind="relationship" relationship="viewControllers" id="CLb-Ho-Fqj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -577,11 +587,67 @@
         </scene>
     </scenes>
     <resources>
+        <image name="F016657A-A4F7-46EB-945E-7D691E2784C3" width="30" height="30">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGQkNYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QDwcI
+ERYbHCUmJygwMzY8P1UkbnVsbNQJCgsMDQ4PEFYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVwc1dOU0Nv
+bG9ygA4SAMAAAIACgAzSEgkTFVpOUy5vYmplY3RzoRSAA4AL0hIJFxqiGBmABIAFgAoQANUdHh8gCSEb
+IiMkVk5TU2l6ZV8QD05TQml0c1BlclNhbXBsZV8QEE5TQ29sb3JTcGFjZU5hbWVZTlNQREZEYXRhgAaA
+B4AIgAlYezMwLCAzMH1fEBlOU0NhbGlicmF0ZWRSR0JDb2xvclNwYWNlTxEJdyVQREYtMS4zCiXE5fLl
+66fzoNDExgo0IDAgb2JqCjw8IC9MZW5ndGggNSAwIFIgL0ZpbHRlciAvRmxhdGVEZWNvZGUgPj4Kc3Ry
+ZWFtCngBK1QIVChU0HcuNlRILlYwAMPiZAUjEwUzhVwQBUQ5QDaUMgNywHI5ChkKaVoKgQDbPg44CmVu
+ZHN0cmVhbQplbmRvYmoKNSAwIG9iago1MwplbmRvYmoKMiAwIG9iago8PCAvVHlwZSAvUGFnZSAvUGFy
+ZW50IDMgMCBSIC9SZXNvdXJjZXMgNiAwIFIgL0NvbnRlbnRzIDQgMCBSID4+CmVuZG9iago2IDAgb2Jq
+Cjw8IC9Qcm9jU2V0IFsgL1BERiBdIC9Db2xvclNwYWNlIDw8IC9DczEgNyAwIFIgPj4gPj4KZW5kb2Jq
+CjggMCBvYmoKPDwgL0xlbmd0aCA5IDAgUiAvTiAzIC9BbHRlcm5hdGUgL0RldmljZVJHQiAvRmlsdGVy
+IC9GbGF0ZURlY29kZSA+PgpzdHJlYW0KeAGFVd9v21QUPolvUqQWPyBYR4eKxa9VU1u5GxqtxgZJk6Xt
+Shal6dgqJOQ6N4mpGwfb6baqT3uBNwb8AUDZAw9IPCENBmJ72fbAtElThyqqSUh76MQPISbtBVXhu3Zi
+J1PEXPX6yznfOec7517bRD1fabWaGVWIlquunc8klZOnFpSeTYrSs9RLA9Sr6U4tkcvNEi7BFffO6+Ed
+igjL7ZHu/k72I796i9zRiSJPwG4VHX0Z+AxRzNRrtksUvwf7+Gm3BtzzHPDTNgQCqwKXfZwSeNHHJz1O
+IT8JjtAq6xWtCLwGPLzYZi+3YV8DGMiT4VVuG7oiZpGzrZJhcs/hL49xtzH/Dy6bdfTsXYNY+5yluWO4
+D4neK/ZUvok/17X0HPBLsF+vuUlhfwX4j/rSfAJ4H1H0qZJ9dN7nR19frRTeBt4Fe9FwpwtN+2p1MXsc
+GLHR9SXrmMgjONd1ZxKzpBeA71b4tNhj6JGoyFNp4GHgwUp9qplfmnFW5oTdy7NamcwCI49kv6fN5IAH
+gD+0rbyoBc3SOjczohbyS1drbq6pQdqumllRC/0ymTtej8gpbbuVwpQfyw66dqEZyxZKxtHpJn+tZnpn
+EdrYBbueF9qQn93S7HQGGHnYP7w6L+YGHNtd1FJitqPAR+hERCNOFi1i1alKO6RQnjKUxL1GNjwlMsiE
+hcPLYTEiT9ISbN15OY/jx4SMshe9LaJRpTvHr3C/ybFYP1PZAfwfYrPsMBtnE6SwN9ib7AhLwTrBDgUK
+cm06FSrTfSj187xPdVQWOk5Q8vxAfSiIUc7Z7xr6zY/+hpqwSyv0I0/QMTRb7RMgBxNodTfSPqdraz/s
+DjzKBrv4zu2+a2t0/HHzjd2Lbcc2sG7GtsL42K+xLfxtUgI7YHqKlqHK8HbCCXgjHT1cAdMlDetv4FnQ
+2lLasaOl6vmB0CMmwT/IPszSueHQqv6i/qluqF+oF9TfO2qEGTumJH0qfSv9KH0nfS/9TIp0Wboi/SRd
+lb6RLgU5u++9nyXYe69fYRPdil1o1WufNSdTTsp75BfllPy8/LI8G7AUuV8ek6fkvfDsCfbNDP0dvRh0
+CrNqTbV7LfEEGDQPJQadBtfGVMWEq3QWWdufk6ZSNsjG2PQjp3ZcnOWWing6noonSInvi0/Ex+IzAree
+vPhe+CawpgP1/pMTMDo64G0sTCXIM+KdOnFWRfQKdJvQzV1+Bt8OokmrdtY2yhVX2a+qrykJfMq4Ml3V
+R4cVzTQVz+UoNne4vcKLoyS+gyKO6EHe+75Fdt0Mbe5bRIf/wjvrVmhbqBN97RD1vxrahvBOfOYzoosH
+9bq94uejSOQGkVM6sN/7HelL4t10t9F4gPdVzydEOx83Gv+uNxo7XyL/FtFl8z9ZAHF4CmVuZHN0cmVh
+bQplbmRvYmoKOSAwIG9iagoxMDQ3CmVuZG9iago3IDAgb2JqClsgL0lDQ0Jhc2VkIDggMCBSIF0KZW5k
+b2JqCjMgMCBvYmoKPDwgL1R5cGUgL1BhZ2VzIC9NZWRpYUJveCBbMCAwIDMwIDMwXSAvQ291bnQgMSAv
+S2lkcyBbIDIgMCBSIF0gPj4KZW5kb2JqCjEwIDAgb2JqCjw8IC9UeXBlIC9DYXRhbG9nIC9QYWdlcyAz
+IDAgUiA+PgplbmRvYmoKMTEgMCBvYmoKKE5ldyBJbWFnZSkKZW5kb2JqCjEyIDAgb2JqCihNYWMgT1Mg
+WCAxMC4xMCBRdWFydHogUERGQ29udGV4dCkKZW5kb2JqCjEzIDAgb2JqCihBbGV4IFJhZnRpcykKZW5k
+b2JqCjE0IDAgb2JqCihPcGFjaXR5KQplbmRvYmoKMTUgMCBvYmoKKEQ6MjAxNDA3MzEyMzI4NTFaMDAn
+MDAnKQplbmRvYmoKMSAwIG9iago8PCAvVGl0bGUgMTEgMCBSIC9BdXRob3IgMTMgMCBSIC9Qcm9kdWNl
+ciAxMiAwIFIgL0NyZWF0b3IgMTQgMCBSIC9DcmVhdGlvbkRhdGUKMTUgMCBSIC9Nb2REYXRlIDE1IDAg
+UiA+PgplbmRvYmoKeHJlZgowIDE2CjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMTgyNiAwMDAwMCBu
+IAowMDAwMDAwMTY3IDAwMDAwIG4gCjAwMDAwMDE1MTggMDAwMDAgbiAKMDAwMDAwMDAyMiAwMDAwMCBu
+IAowMDAwMDAwMTQ5IDAwMDAwIG4gCjAwMDAwMDAyNDcgMDAwMDAgbiAKMDAwMDAwMTQ4MyAwMDAwMCBu
+IAowMDAwMDAwMzE1IDAwMDAwIG4gCjAwMDAwMDE0NjMgMDAwMDAgbiAKMDAwMDAwMTU5OSAwMDAwMCBu
+IAowMDAwMDAxNjQ5IDAwMDAwIG4gCjAwMDAwMDE2NzcgMDAwMDAgbiAKMDAwMDAwMTcyOCAwMDAwMCBu
+IAowMDAwMDAxNzU4IDAwMDAwIG4gCjAwMDAwMDE3ODQgMDAwMDAgbiAKdHJhaWxlcgo8PCAvU2l6ZSAx
+NiAvUm9vdCAxMCAwIFIgL0luZm8gMSAwIFIgL0lEIFsgPGNmMGUwZDdjNzlhMDUxMjRjODgyODdkYjRi
+YjJiYzI1Pgo8Y2YwZTBkN2M3OWEwNTEyNGM4ODI4N2RiNGJiMmJjMjU+IF0gPj4Kc3RhcnR4cmVmCjE5
+NDYKJSVFT0YK0ikqKyxaJGNsYXNzbmFtZVgkY2xhc3Nlc11OU1BERkltYWdlUmVwoy0uL11OU1BERklt
+YWdlUmVwWk5TSW1hZ2VSZXBYTlNPYmplY3TSKSoxMldOU0FycmF5ojEv0ikqNDVeTlNNdXRhYmxlQXJy
+YXmjNDEv0zc4CTk6O1dOU1doaXRlXE5TQ29sb3JTcGFjZUQwIDAAEAOADdIpKj0+V05TQ29sb3KiPS/S
+KSpAQVdOU0ltYWdlokAvXxAPTlNLZXllZEFyY2hpdmVy0URFVHJvb3SAAQAIABEAGgAjAC0AMgA3AEkA
+TwBYAF8AbABzAHsAfQCCAIQAhgCLAJYAmACaAJwAoQCkAKYAqACqAKwAtwC+ANAA4wDtAO8A8QDzAPUA
+/gEaCpUKmgqlCq4KvArACs4K2QriCucK7wryCvcLBgsKCxELGQsmCysLLQsvCzQLPAs/C0QLTAtPC2EL
+ZAtpAAAAAAAAAgEAAAAAAAAARgAAAAAAAAAAAAAAAAAAC2s
+</mutableData>
+        </image>
         <image name="SF.jpg" width="1080" height="1920"/>
         <image name="first" width="30" height="30"/>
         <image name="glyphicons-137-cogwheel.png" width="24" height="24"/>
+        <image name="glyphicons-38-coins.png" width="26" height="25"/>
         <image name="sample.jpg" width="200" height="200"/>
-        <image name="second" width="30" height="30"/>
         <image name="thebay.jpg" width="2592" height="736"/>
     </resources>
     <inferredMetricsTieBreakers>
