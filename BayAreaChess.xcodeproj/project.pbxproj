@@ -633,6 +633,8 @@
 		815327651AD5B01C00D8D230 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 815327631AD5B01C00D8D230 /* LaunchScreen.xib */; };
 		815327711AD5B01C00D8D230 /* BayAreaChessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815327701AD5B01C00D8D230 /* BayAreaChessTests.swift */; };
 		8153277B1AD5B8EA00D8D230 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8153277A1AD5B8EA00D8D230 /* LoginViewController.swift */; };
+		81E4B9A81AF324AF00A18621 /* TournamentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E4B9A71AF324AF00A18621 /* TournamentsViewController.swift */; };
+		81E4BA5A1AF40E0F00A18621 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81E4BA521AF40D0F00A18621 /* SwiftHTTP.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -642,6 +644,34 @@
 			proxyType = 1;
 			remoteGlobalIDString = 815327521AD5B01C00D8D230;
 			remoteInfo = BayAreaChess;
+		};
+		81E4BA511AF40D0F00A18621 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81E4BA4A1AF40D0E00A18621 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BFD901619C8D8B500DD99B6;
+			remoteInfo = SwiftHTTP;
+		};
+		81E4BA531AF40D0F00A18621 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81E4BA4A1AF40D0E00A18621 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BFD902119C8D8B500DD99B6;
+			remoteInfo = SwiftHTTPTests;
+		};
+		81E4BA551AF40D0F00A18621 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81E4BA4A1AF40D0E00A18621 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D958025919E6EEEB003C8218;
+			remoteInfo = SwiftHTTPOSX;
+		};
+		81E4BA571AF40D0F00A18621 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81E4BA4A1AF40D0E00A18621 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D958026319E6EEEB003C8218;
+			remoteInfo = SwiftHTTPOSXTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -1276,6 +1306,8 @@
 		8153276F1AD5B01C00D8D230 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		815327701AD5B01C00D8D230 /* BayAreaChessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BayAreaChessTests.swift; sourceTree = "<group>"; };
 		8153277A1AD5B8EA00D8D230 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		81E4B9A71AF324AF00A18621 /* TournamentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentsViewController.swift; sourceTree = "<group>"; };
+		81E4BA4A1AF40D0E00A18621 /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = ../../Desktop/SwiftHTTP/SwiftHTTP.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1283,6 +1315,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81E4BA5A1AF40E0F00A18621 /* SwiftHTTP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1924,6 +1957,7 @@
 		8153274A1AD5B01C00D8D230 = {
 			isa = PBXGroup;
 			children = (
+				81E4BA4A1AF40D0E00A18621 /* SwiftHTTP.xcodeproj */,
 				815327551AD5B01C00D8D230 /* BayAreaChess */,
 				8153276D1AD5B01C00D8D230 /* BayAreaChessTests */,
 				815327541AD5B01C00D8D230 /* Products */,
@@ -1959,6 +1993,7 @@
 				810AA7411AD78C9200E8FF25 /* InitialViewController.swift */,
 				81291FE71AE09B4900793FC6 /* LandingViewController.swift */,
 				81291FE91AE09ECA00793FC6 /* SignUpViewController.swift */,
+				81E4B9A71AF324AF00A18621 /* TournamentsViewController.swift */,
 			);
 			path = BayAreaChess;
 			sourceTree = "<group>";
@@ -1986,6 +2021,17 @@
 				8153276F1AD5B01C00D8D230 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		81E4BA4B1AF40D0E00A18621 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81E4BA521AF40D0F00A18621 /* SwiftHTTP.framework */,
+				81E4BA541AF40D0F00A18621 /* SwiftHTTPTests.xctest */,
+				81E4BA561AF40D0F00A18621 /* SwiftHTTP.framework */,
+				81E4BA581AF40D0F00A18621 /* SwiftHTTPOSXTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2055,6 +2101,12 @@
 			mainGroup = 8153274A1AD5B01C00D8D230;
 			productRefGroup = 815327541AD5B01C00D8D230 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 81E4BA4B1AF40D0E00A18621 /* Products */;
+					ProjectRef = 81E4BA4A1AF40D0E00A18621 /* SwiftHTTP.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				815327521AD5B01C00D8D230 /* BayAreaChess */,
@@ -2062,6 +2114,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		81E4BA521AF40D0F00A18621 /* SwiftHTTP.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftHTTP.framework;
+			remoteRef = 81E4BA511AF40D0F00A18621 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		81E4BA541AF40D0F00A18621 /* SwiftHTTPTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftHTTPTests.xctest;
+			remoteRef = 81E4BA531AF40D0F00A18621 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		81E4BA561AF40D0F00A18621 /* SwiftHTTP.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftHTTP.framework;
+			remoteRef = 81E4BA551AF40D0F00A18621 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		81E4BA581AF40D0F00A18621 /* SwiftHTTPOSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftHTTPOSXTests.xctest;
+			remoteRef = 81E4BA571AF40D0F00A18621 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		815327511AD5B01C00D8D230 /* Resources */ = {
@@ -2707,6 +2790,7 @@
 				8153275D1AD5B01C00D8D230 /* SecondViewController.swift in Sources */,
 				810AA73E1AD6501100E8FF25 /* NavigationController.swift in Sources */,
 				810AA7401AD7741B00E8FF25 /* TextField.swift in Sources */,
+				81E4B9A81AF324AF00A18621 /* TournamentsViewController.swift in Sources */,
 				81291FEA1AE09ECA00793FC6 /* SignUpViewController.swift in Sources */,
 				815327591AD5B01C00D8D230 /* AppDelegate.swift in Sources */,
 				8153275B1AD5B01C00D8D230 /* FirstViewController.swift in Sources */,
@@ -2834,6 +2918,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/czarlos/Desktop/SwiftHTTP/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = BayAreaChess/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2844,6 +2932,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/czarlos/Desktop/SwiftHTTP/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = BayAreaChess/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

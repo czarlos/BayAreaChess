@@ -12,6 +12,8 @@
 	<dict>
 		<key>11AB8CD5FD39345FAC1357B6437855A532106F2B</key>
 		<string>github.com:czarlos/BayAreaChess.git</string>
+		<key>38D9009B322140394B9DA7467F68950B56B35FF5</key>
+		<string>github.com:daltoniam/SwiftHTTP.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>BayAreaChess.xcodeproj</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>11AB8CD5FD39345FAC1357B6437855A532106F2B</key>
 		<string>../..</string>
+		<key>38D9009B322140394B9DA7467F68950B56B35FF5</key>
+		<string>../../../Desktop/SwiftHTTP</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:czarlos/BayAreaChess.git</string>
@@ -35,6 +39,14 @@
 			<string>11AB8CD5FD39345FAC1357B6437855A532106F2B</string>
 			<key>IDESourceControlWCCName</key>
 			<string>BayAreaChess</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>38D9009B322140394B9DA7467F68950B56B35FF5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SwiftHTTP</string>
 		</dict>
 	</array>
 </dict>
