@@ -10,7 +10,8 @@ import UIKit
 import SwiftHTTP
 
 class TournamentsViewController : UITableViewController {
-    
+    let items = ["foo", "bar", "baz"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -18,10 +19,22 @@ class TournamentsViewController : UITableViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidLoad()
         getTournaments()
+        self.tableView.reloadData()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.items.count
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let item = self.items[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath) as! UITableViewCell
+        cell.textLabel!.text = item
+        return cell
     }
     
     func getTournaments() {

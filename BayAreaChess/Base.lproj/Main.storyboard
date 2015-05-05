@@ -85,11 +85,11 @@
             <objects>
                 <tableViewController id="o56-kC-EJ2" customClass="TournamentsViewController" customModule="BayAreaChess" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="pq1-Kh-gBd">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ICG-lB-khT">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" id="ICG-lB-khT">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ICG-lB-khT" id="nQn-h9-ciM">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -101,14 +101,14 @@
                             <outlet property="delegate" destination="o56-kC-EJ2" id="JBR-bv-0Pj"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" image="glyphicons-38-coins.png" id="TaS-1U-LDV" userLabel="Third"/>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="Hello" id="zkZ-EW-0Ty"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ctG-Rx-0p7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1560" y="1170"/>
+            <point key="canvasLocation" x="2372" y="1174"/>
         </scene>
         <!--Landing View Controller-->
         <scene sceneID="DXL-J5-xB2">
@@ -555,12 +555,31 @@
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="o56-kC-EJ2" kind="relationship" relationship="viewControllers" id="CLb-Ho-Fqj"/>
+                        <segue destination="sVh-Lr-gfv" kind="relationship" relationship="viewControllers" id="CLb-Ho-Fqj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="8Of-bs-6Rd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sVh-Lr-gfv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="glyphicons-38-coins.png" id="TaS-1U-LDV" userLabel="Third"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lHS-VX-Fym">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="o56-kC-EJ2" kind="relationship" relationship="rootViewController" id="JiH-cg-dVG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="myH-TJ-v4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1560" y="1174"/>
         </scene>
     </scenes>
     <resources>
