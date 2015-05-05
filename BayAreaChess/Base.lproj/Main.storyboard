@@ -80,7 +80,7 @@
             </objects>
             <point key="canvasLocation" x="768" y="-296"/>
         </scene>
-        <!--Hello-->
+        <!--Tournaments-->
         <scene sceneID="5b6-9H-cfR">
             <objects>
                 <tableViewController id="o56-kC-EJ2" customClass="TournamentsViewController" customModule="BayAreaChess" customModuleProvider="target" sceneMemberID="viewController">
@@ -102,7 +102,7 @@
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" title="Hello" id="zkZ-EW-0Ty"/>
+                    <navigationItem key="navigationItem" title="Tournaments" id="zkZ-EW-0Ty"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>

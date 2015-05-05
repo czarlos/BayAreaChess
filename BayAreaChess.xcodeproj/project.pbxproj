@@ -625,6 +625,7 @@
 		812924AE1AE175EE00793FC6 /* glyphicons-97-vector-path-polygon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8129224C1AE175ED00793FC6 /* glyphicons-97-vector-path-polygon.png */; };
 		812924AF1AE175EE00793FC6 /* glyphicons-98-vector-path-line.png in Resources */ = {isa = PBXBuildFile; fileRef = 8129224D1AE175ED00793FC6 /* glyphicons-98-vector-path-line.png */; };
 		812924B01AE175EE00793FC6 /* glyphicons-99-vector-path-curve.png in Resources */ = {isa = PBXBuildFile; fileRef = 8129224E1AE175ED00793FC6 /* glyphicons-99-vector-path-curve.png */; };
+		813CA8B11AF84E8000B8EA6C /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813CA8B01AF84E8000B8EA6C /* SwiftyJSON.swift */; };
 		815327591AD5B01C00D8D230 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815327581AD5B01C00D8D230 /* AppDelegate.swift */; };
 		8153275B1AD5B01C00D8D230 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8153275A1AD5B01C00D8D230 /* FirstViewController.swift */; };
 		8153275D1AD5B01C00D8D230 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8153275C1AD5B01C00D8D230 /* SecondViewController.swift */; };
@@ -1294,6 +1295,7 @@
 		8129224C1AE175ED00793FC6 /* glyphicons-97-vector-path-polygon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-97-vector-path-polygon.png"; sourceTree = "<group>"; };
 		8129224D1AE175ED00793FC6 /* glyphicons-98-vector-path-line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-98-vector-path-line.png"; sourceTree = "<group>"; };
 		8129224E1AE175ED00793FC6 /* glyphicons-99-vector-path-curve.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-99-vector-path-curve.png"; sourceTree = "<group>"; };
+		813CA8B01AF84E8000B8EA6C /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = ../../../Desktop/SwiftyJSON/Source/SwiftyJSON.swift; sourceTree = "<group>"; };
 		815327531AD5B01C00D8D230 /* BayAreaChess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BayAreaChess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		815327571AD5B01C00D8D230 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		815327581AD5B01C00D8D230 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -1993,6 +1995,7 @@
 				810AA7411AD78C9200E8FF25 /* InitialViewController.swift */,
 				81291FE71AE09B4900793FC6 /* LandingViewController.swift */,
 				81291FE91AE09ECA00793FC6 /* SignUpViewController.swift */,
+				813CA8B01AF84E8000B8EA6C /* SwiftyJSON.swift */,
 				81E4B9A71AF324AF00A18621 /* TournamentsViewController.swift */,
 			);
 			path = BayAreaChess;
@@ -2787,6 +2790,7 @@
 				8153277B1AD5B8EA00D8D230 /* LoginViewController.swift in Sources */,
 				810AA7421AD78C9200E8FF25 /* InitialViewController.swift in Sources */,
 				81291FE81AE09B4900793FC6 /* LandingViewController.swift in Sources */,
+				813CA8B11AF84E8000B8EA6C /* SwiftyJSON.swift in Sources */,
 				8153275D1AD5B01C00D8D230 /* SecondViewController.swift in Sources */,
 				810AA73E1AD6501100E8FF25 /* NavigationController.swift in Sources */,
 				810AA7401AD7741B00E8FF25 /* TextField.swift in Sources */,
