@@ -12,9 +12,8 @@ import SwiftHTTP
 class TournamentsViewController : UITableViewController {
     var items = ["foo", "bar", "baz"]
     var eventList = [String]()
+    var dateList = [String]()
     let SUMMARY = "summary"
-    let GENERAL_TOURNAMENTS_URL = "http://bac.colab.duke.edu:3000/api/v1/tournaments/general"
-    let UI_TABLE_VIEW_CELL = "UITableViewCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,31 +29,59 @@ class TournamentsViewController : UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return self.items.count
         return self.eventList.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        let item = self.items[indexPath.row]
         let item: AnyObject = self.eventList[indexPath.row]
-        let cell = tableView.dequeueReusableCellWithIdentifier(UI_TABLE_VIEW_CELL, forIndexPath: indexPath) as! UITableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier(Constants.Identifier.UI_TABLE_VIEW_CELL, forIndexPath: indexPath) as! UITableViewCell
+        cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: Constants.Identifier.UI_TABLE_VIEW_CELL);
+        
         cell.textLabel!.text = item as? String
+        cell.detailTextLabel?.text = self.dateList[indexPath.row]
         return cell
     }
     
     func getTournaments() {
         var request = HTTPTask()
-        request.GET(GENERAL_TOURNAMENTS_URL, parameters: nil, success: {(response: HTTPResponse) in
+        request.GET(Constants.URL.GENERAL_TOURNAMENTS, parameters: nil, success: {(response: HTTPResponse) in
             if let data = response.responseObject as? NSData {
                 dispatch_async(dispatch_get_main_queue()) {
                     let json = JSON(data: data)
                     self.eventList = self.getEventArray(json)
+                    self.dateList = self.getDateArray(json)
                     self.tableView.reloadData()
                 }
             }
             },failure: {(error: NSError, response: HTTPResponse?) in
                 println("error: \(error)")
         })
+    }
+    
+    func getDateArray(json: JSON) -> [String] {
+        var dateArray : [String] = []
+        for i in json.arrayValue {
+            var item = i["start"]["dateTime"]
+            var formatter: NSDateFormatter = NSDateFormatter();
+            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssSSSZZZZ";
+            var date : NSDate = NSDate();
+            
+            if (item.string == nil) {
+                dateArray.append("N/A")
+                continue
+            }
+            else if (formatter.dateFromString(item.string!) != nil) {
+                date = formatter.dateFromString(item.string!)!
+            }
+            else {
+                formatter.dateFormat = "yyyy-MM-dd"
+                date = formatter.dateFromString(item.string!)!;
+            }
+            formatter.dateFormat = "MM-dd-yyyy ";
+            let stringDate: String = formatter.stringFromDate(date);
+            dateArray.append(stringDate);
+        }
+        return dateArray
     }
     
     func getEventArray(json: JSON) -> [String] {

@@ -13,6 +13,7 @@
 		810AA7421AD78C9200E8FF25 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810AA7411AD78C9200E8FF25 /* InitialViewController.swift */; };
 		810AA7441AD7995300E8FF25 /* thebay.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810AA7431AD7995300E8FF25 /* thebay.jpg */; };
 		810AA7461AD79A8600E8FF25 /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810AA7451AD79A8600E8FF25 /* sample.jpg */; };
+		8115EFC81AF88A8000280411 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8115EFC71AF88A8000280411 /* Constants.swift */; };
 		81291FE81AE09B4900793FC6 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81291FE71AE09B4900793FC6 /* LandingViewController.swift */; };
 		81291FEA1AE09ECA00793FC6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81291FE91AE09ECA00793FC6 /* SignUpViewController.swift */; };
 		8129224F1AE175ED00793FC6 /* glyphicons-1-glass.png in Resources */ = {isa = PBXBuildFile; fileRef = 81291FED1AE175EA00793FC6 /* glyphicons-1-glass.png */; };
@@ -683,6 +684,7 @@
 		810AA7411AD78C9200E8FF25 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		810AA7431AD7995300E8FF25 /* thebay.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thebay.jpg; sourceTree = "<group>"; };
 		810AA7451AD79A8600E8FF25 /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
+		8115EFC71AF88A8000280411 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../Constants.swift; sourceTree = "<group>"; };
 		81291FE71AE09B4900793FC6 /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		81291FE91AE09ECA00793FC6 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		81291FED1AE175EA00793FC6 /* glyphicons-1-glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-1-glass.png"; sourceTree = "<group>"; };
@@ -1983,6 +1985,7 @@
 				810AA7431AD7995300E8FF25 /* thebay.jpg */,
 				810AA73B1AD5DCA100E8FF25 /* SF.jpg */,
 				815327581AD5B01C00D8D230 /* AppDelegate.swift */,
+				8115EFC71AF88A8000280411 /* Constants.swift */,
 				8153275A1AD5B01C00D8D230 /* FirstViewController.swift */,
 				8153275C1AD5B01C00D8D230 /* SecondViewController.swift */,
 				8153275E1AD5B01C00D8D230 /* Main.storyboard */,
@@ -2798,6 +2801,7 @@
 				81291FEA1AE09ECA00793FC6 /* SignUpViewController.swift in Sources */,
 				815327591AD5B01C00D8D230 /* AppDelegate.swift in Sources */,
 				8153275B1AD5B01C00D8D230 /* FirstViewController.swift in Sources */,
+				8115EFC81AF88A8000280411 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
