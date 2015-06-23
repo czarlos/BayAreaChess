@@ -24,7 +24,7 @@ class SignUpViewController : UIViewController {
         self.navigationController?.navigationBarHidden = false
     }
     
-    @IBAction func goBack(sender: UIButton) {
+    @IBAction func goBack(sender: UIBarButtonItem) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 }

@@ -43,5 +43,9 @@ class LoginViewController: UIViewController {
         }
         return false
     }
+    
+    @IBAction func goBack (sender: UIBarButtonItem) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 }
 
