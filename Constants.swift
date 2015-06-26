@@ -10,7 +10,7 @@ import Foundation
 
 class Constants {
     struct URL {
-        static let BASE = "http://bac.colab.duke.edu:3000/api/v1/"
+        static let BASE = "http://localhost:3000/api/v1/" //"http://bac.colab.duke.edu:3000/api/v1/"
         static let GENERAL_TOURNAMENTS = BASE + "tournaments/general"
     }
     struct Identifier {

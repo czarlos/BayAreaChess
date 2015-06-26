@@ -7,7 +7,7 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>07E39EC5-2F67-4395-A830-EB489BBA885E</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>BayAreaChess</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>11AB8CD5FD39345FAC1357B6437855A532106F2B</key>
@@ -18,15 +18,15 @@
 		<string>github.com:SwiftyJSON/SwiftyJSON.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>BayAreaChess.xcodeproj/project.xcworkspace</string>
+	<string>BayAreaChess.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>11AB8CD5FD39345FAC1357B6437855A532106F2B</key>
 		<string>../..</string>
 		<key>38D9009B322140394B9DA7467F68950B56B35FF5</key>
-		<string>../../../../Desktop/SwiftHTTP</string>
+		<string>../../../Desktop/SwiftHTTP</string>
 		<key>C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3</key>
-		<string>../../../../Desktop/SwiftyJSON</string>
+		<string>../../../Desktop/SwiftyJSON</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:czarlos/BayAreaChess.git</string>

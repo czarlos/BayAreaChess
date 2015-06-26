@@ -34,11 +34,13 @@ class TournamentsViewController : UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let item: AnyObject = self.eventList[indexPath.row]
-        var cell = tableView.dequeueReusableCellWithIdentifier(Constants.Identifier.UI_TABLE_VIEW_CELL, forIndexPath: indexPath) as! UITableViewCell
+        
+        var cell = tableView.dequeueReusableCellWithIdentifier(Constants.Identifier.UI_TABLE_VIEW_CELL) as! UITableViewCell
         cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: Constants.Identifier.UI_TABLE_VIEW_CELL);
         
         cell.textLabel!.text = item as? String
         cell.detailTextLabel?.text = self.dateList[indexPath.row]
+                
         return cell
     }
     

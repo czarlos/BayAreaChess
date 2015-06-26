@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D130a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XN7-JH-Pfs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D130a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XN7-JH-Pfs">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -49,7 +49,7 @@
                                     <constraint firstAttribute="height" constant="20" id="Vsi-Os-uwy"/>
                                     <constraint firstAttribute="width" constant="20" id="nMF-kO-23x"/>
                                 </constraints>
-                                <state key="normal" image="glyphicons-137-cogwheel.png">
+                                <state key="normal" image="address book.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -63,7 +63,7 @@
                                     <constraint firstAttribute="height" constant="300" id="uoz-OC-qqa"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bWz-Vq-74S">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cells" id="bWz-Vq-74S">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bWz-Vq-74S" id="VJU-XZ-Wa0">
@@ -144,15 +144,29 @@
         <scene sceneID="5b6-9H-cfR">
             <objects>
                 <tableViewController id="o56-kC-EJ2" customClass="TournamentsViewController" customModule="BayAreaChess" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="pq1-Kh-gBd">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" sectionHeaderHeight="22" sectionFooterHeight="22" id="pq1-Kh-gBd">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" id="ICG-lB-khT">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="jvY-V3-QtQ" detailTextLabel="VYN-RS-879" rowHeight="45" style="IBUITableViewCellStyleSubtitle" id="ICG-lB-khT">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ICG-lB-khT" id="nQn-h9-ciM">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jvY-V3-QtQ">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VYN-RS-879">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -493,7 +507,7 @@
         <scene sceneID="8Of-bs-6Rd">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sVh-Lr-gfv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="glyphicons-38-coins.png" id="TaS-1U-LDV" userLabel="Third"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="address book.png" id="TaS-1U-LDV" userLabel="Third"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lHS-VX-Fym">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -511,9 +525,8 @@
     </scenes>
     <resources>
         <image name="SF.jpg" width="1080" height="1920"/>
+        <image name="address book.png" width="32" height="32"/>
         <image name="first" width="30" height="30"/>
-        <image name="glyphicons-137-cogwheel.png" width="24" height="24"/>
-        <image name="glyphicons-38-coins.png" width="26" height="25"/>
         <image name="sample.jpg" width="200" height="200"/>
         <image name="thebay.jpg" width="2592" height="736"/>
     </resources>
