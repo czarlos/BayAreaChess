@@ -27,6 +27,7 @@
 		815327711AD5B01C00D8D230 /* BayAreaChessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815327701AD5B01C00D8D230 /* BayAreaChessTests.swift */; };
 		8153277B1AD5B8EA00D8D230 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8153277A1AD5B8EA00D8D230 /* LoginViewController.swift */; };
 		819BB0871B3E0036002C9E2C /* address book@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 819BB0861B3E0036002C9E2C /* address book@2x.png */; };
+		819BB08A1B447844002C9E2C /* TournamentInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819BB0891B447844002C9E2C /* TournamentInformation.swift */; };
 		81E4B9A81AF324AF00A18621 /* TournamentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E4B9A71AF324AF00A18621 /* TournamentsViewController.swift */; };
 		81E4BA5A1AF40E0F00A18621 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81E4BA521AF40D0F00A18621 /* SwiftHTTP.framework */; };
 /* End PBXBuildFile section */
@@ -94,6 +95,7 @@
 		815327701AD5B01C00D8D230 /* BayAreaChessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BayAreaChessTests.swift; sourceTree = "<group>"; };
 		8153277A1AD5B8EA00D8D230 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		819BB0861B3E0036002C9E2C /* address book@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "address book@2x.png"; path = "../../../Downloads/free_retina_display_friendly_icons/png/address book@2x.png"; sourceTree = "<group>"; };
+		819BB0891B447844002C9E2C /* TournamentInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentInformation.swift; sourceTree = "<group>"; };
 		81E4B9A71AF324AF00A18621 /* TournamentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentsViewController.swift; sourceTree = "<group>"; };
 		81E4BA4A1AF40D0E00A18621 /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = ../../Desktop/SwiftHTTP/SwiftHTTP.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +162,7 @@
 				813CA8B01AF84E8000B8EA6C /* SwiftyJSON.swift */,
 				81E4B9A71AF324AF00A18621 /* TournamentsViewController.swift */,
 				81483A641B3A088500DEE874 /* EditProfileViewController.swift */,
+				819BB0891B447844002C9E2C /* TournamentInformation.swift */,
 			);
 			path = BayAreaChess;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				815327591AD5B01C00D8D230 /* AppDelegate.swift in Sources */,
 				8153275B1AD5B01C00D8D230 /* FirstViewController.swift in Sources */,
 				8115EFC81AF88A8000280411 /* Constants.swift in Sources */,
+				819BB08A1B447844002C9E2C /* TournamentInformation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

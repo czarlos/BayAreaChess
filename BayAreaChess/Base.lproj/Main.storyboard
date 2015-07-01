@@ -43,19 +43,6 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHj-qP-A4T">
-                                <rect key="frame" x="408" y="208" width="20" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="Vsi-Os-uwy"/>
-                                    <constraint firstAttribute="width" constant="20" id="nMF-kO-23x"/>
-                                </constraints>
-                                <state key="normal" image="address book.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="lK7-KX-wlk" kind="show" id="8rk-vt-HCQ"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="lgv-wI-wgf">
                                 <rect key="frame" x="0.0" y="251" width="600" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -72,6 +59,19 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHj-qP-A4T">
+                                <rect key="frame" x="472" y="208" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Vsi-Os-uwy"/>
+                                    <constraint firstAttribute="width" constant="20" id="nMF-kO-23x"/>
+                                </constraints>
+                                <state key="normal" image="address book.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="lK7-KX-wlk" kind="show" id="8rk-vt-HCQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -88,7 +88,7 @@
                             <constraint firstItem="mSa-5T-wfQ" firstAttribute="leading" secondItem="NtI-31-MBa" secondAttribute="leading" id="V3D-Xe-qUU"/>
                             <constraint firstItem="NtI-31-MBa" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="50" id="lLG-oS-Aiv"/>
                             <constraint firstItem="6it-UB-Nqh" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="voZ-iq-TS9"/>
-                            <constraint firstAttribute="trailing" secondItem="vHj-qP-A4T" secondAttribute="trailing" constant="172" id="yiV-ET-xRZ"/>
+                            <constraint firstAttribute="trailing" secondItem="vHj-qP-A4T" secondAttribute="trailing" constant="108" id="yiV-ET-xRZ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
@@ -168,6 +168,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="VhW-yf-5Uf" kind="show" identifier="specificTournament" id="w4Z-sH-XyN"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -183,6 +186,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ctG-Rx-0p7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2232" y="772"/>
+        </scene>
+        <!--Tournament Information-->
+        <scene sceneID="Gdq-3a-72Y">
+            <objects>
+                <viewController storyboardIdentifier="specificTournament" title="Tournament Information" id="VhW-yf-5Uf" customClass="TournamentInformation" customModule="BayAreaChess" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Duk-op-Y7n"/>
+                        <viewControllerLayoutGuide type="bottom" id="EMT-oi-XQx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YAv-PF-5wB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Job" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8h-QS-2xH">
+                                <rect key="frame" x="262" y="228" width="77" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EMT-oi-XQx" firstAttribute="top" secondItem="Z8h-QS-2xH" secondAttribute="bottom" constant="238" id="nfX-Nw-9Yu"/>
+                            <constraint firstItem="Z8h-QS-2xH" firstAttribute="centerX" secondItem="YAv-PF-5wB" secondAttribute="centerX" id="qC1-MM-oYq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myCaption" destination="Z8h-QS-2xH" id="CfL-SE-5fP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AYb-gf-kGB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3052" y="772"/>
         </scene>
         <!--Landing View Controller-->
         <scene sceneID="DXL-J5-xB2">

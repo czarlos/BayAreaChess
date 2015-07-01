@@ -44,6 +44,18 @@ class TournamentsViewController : UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("specificTournament", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "specificTournament") {
+            let viewController : TournamentInformation = segue.destinationViewController as! TournamentInformation
+            let indexPath = self.tableView.indexPathForSelectedRow()
+            viewController.myIndex = indexPath!.row
+        }
+    }
+    
     func getTournaments() {
         var request = HTTPTask()
         request.GET(Constants.URL.GENERAL_TOURNAMENTS, parameters: nil, success: {(response: HTTPResponse) in
