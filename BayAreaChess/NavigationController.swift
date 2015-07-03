@@ -15,7 +15,7 @@ class NavigationController : UINavigationController {
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         super.viewDidLoad()
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

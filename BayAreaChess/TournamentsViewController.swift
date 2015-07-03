@@ -13,7 +13,9 @@ class TournamentsViewController : UITableViewController {
     var items = ["foo", "bar", "baz"]
     var eventList = [String]()
     var dateList = [String]()
+    var TIDList = [String]()
     let SUMMARY = "summary"
+    let ID = "id"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +55,7 @@ class TournamentsViewController : UITableViewController {
             let viewController : TournamentInformation = segue.destinationViewController as! TournamentInformation
             let indexPath = self.tableView.indexPathForSelectedRow()
             viewController.myIndex = indexPath!.row
+            viewController.myTID = self.TIDList[indexPath!.row]
         }
     }
     
@@ -64,6 +67,7 @@ class TournamentsViewController : UITableViewController {
                     let json = JSON(data: data)
                     self.eventList = self.getEventArray(json)
                     self.dateList = self.getDateArray(json)
+                    self.TIDList = self.getTIDArray(json)
                     self.tableView.reloadData()
                 }
             }
@@ -105,4 +109,13 @@ class TournamentsViewController : UITableViewController {
         }
         return events
     }
+    
+    func getTIDArray(json: JSON) -> [String] {
+        var TIDs : [String] = []
+        for item in json.arrayValue {
+            TIDs.append((item[ID]).string!)
+        }
+        return TIDs
+    }
+    
 }
