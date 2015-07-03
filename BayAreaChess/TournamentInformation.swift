@@ -8,9 +8,12 @@
 
 import UIKit
 import SwiftHTTP
+import AddressBook
 
 class TournamentInformation: UIViewController {
     
+    var location : String = String()
+    @IBOutlet var myLocation : UILabel?
     var myIndex : Int = Int()
     var myTID : String = String()
     @IBOutlet var myCaption: UILabel?
@@ -32,13 +35,22 @@ class TournamentInformation: UIViewController {
         myCaption?.text = String(myIndex)
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "tournamentLocation") {
+            let vc : TournamentLocationViewController = segue.destinationViewController as! TournamentLocationViewController
+            vc.myLocation = self.location
+        }
+    }
+    
     func getTournamentData(tid: String) {
         var request = HTTPTask()
         request.GET(Constants.URL.GENERAL_TOURNAMENTS + "/" + tid, parameters: nil, success: {(response: HTTPResponse) in
             if let data = response.responseObject as? NSData {
                 dispatch_async(dispatch_get_main_queue()) {
                     let json = JSON(data: data)
-                    println(json)
+                    self.location = self.getLocation(json)
+                    self.myLocation!.text = self.location
+                    //println(json)
 //                    self.eventList = self.getEventArray(json)
 //                    self.dateList = self.getDateArray(json)
 //                    self.tableView.reloadData()
