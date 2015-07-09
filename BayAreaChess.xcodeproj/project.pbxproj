@@ -26,6 +26,8 @@
 		815327651AD5B01C00D8D230 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 815327631AD5B01C00D8D230 /* LaunchScreen.xib */; };
 		815327711AD5B01C00D8D230 /* BayAreaChessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815327701AD5B01C00D8D230 /* BayAreaChessTests.swift */; };
 		8153277B1AD5B8EA00D8D230 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8153277A1AD5B8EA00D8D230 /* LoginViewController.swift */; };
+		815B4F6F1B49C10300CFB735 /* TournamentLocationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815B4F6E1B49C10300CFB735 /* TournamentLocationAnnotation.swift */; };
+		815B4F751B49C55C00CFB735 /* TournamentLocationViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815B4F741B49C55C00CFB735 /* TournamentLocationViewControllerExtension.swift */; };
 		819BB0871B3E0036002C9E2C /* address book@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 819BB0861B3E0036002C9E2C /* address book@2x.png */; };
 		819BB08A1B447844002C9E2C /* TournamentInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819BB0891B447844002C9E2C /* TournamentInformation.swift */; };
 		81E2ADBC1B4624FE005DB051 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E2ADBB1B4624FE005DB051 /* RegistrationViewController.swift */; };
@@ -96,6 +98,8 @@
 		8153276F1AD5B01C00D8D230 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		815327701AD5B01C00D8D230 /* BayAreaChessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BayAreaChessTests.swift; sourceTree = "<group>"; };
 		8153277A1AD5B8EA00D8D230 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		815B4F6E1B49C10300CFB735 /* TournamentLocationAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentLocationAnnotation.swift; sourceTree = "<group>"; };
+		815B4F741B49C55C00CFB735 /* TournamentLocationViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentLocationViewControllerExtension.swift; sourceTree = "<group>"; };
 		819BB0861B3E0036002C9E2C /* address book@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "address book@2x.png"; path = "../../../Downloads/free_retina_display_friendly_icons/png/address book@2x.png"; sourceTree = "<group>"; };
 		819BB0891B447844002C9E2C /* TournamentInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentInformation.swift; sourceTree = "<group>"; };
 		81E2ADBB1B4624FE005DB051 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 				8153275E1AD5B01C00D8D230 /* Main.storyboard */,
 				81E2ADBB1B4624FE005DB051 /* RegistrationViewController.swift */,
 				81E2ADC11B46303C005DB051 /* TournamentLocationViewController.swift */,
+				815B4F6E1B49C10300CFB735 /* TournamentLocationAnnotation.swift */,
 				810AA73D1AD6501100E8FF25 /* NavigationController.swift */,
 				815327611AD5B01C00D8D230 /* Images.xcassets */,
 				815327631AD5B01C00D8D230 /* LaunchScreen.xib */,
@@ -169,6 +174,7 @@
 				81E4B9A71AF324AF00A18621 /* TournamentsViewController.swift */,
 				81483A641B3A088500DEE874 /* EditProfileViewController.swift */,
 				819BB0891B447844002C9E2C /* TournamentInformation.swift */,
+				815B4F741B49C55C00CFB735 /* TournamentLocationViewControllerExtension.swift */,
 			);
 			path = BayAreaChess;
 			sourceTree = "<group>";
@@ -353,11 +359,13 @@
 			files = (
 				81483A651B3A088500DEE874 /* EditProfileViewController.swift in Sources */,
 				8153277B1AD5B8EA00D8D230 /* LoginViewController.swift in Sources */,
+				815B4F6F1B49C10300CFB735 /* TournamentLocationAnnotation.swift in Sources */,
 				810AA7421AD78C9200E8FF25 /* InitialViewController.swift in Sources */,
 				81291FE81AE09B4900793FC6 /* LandingViewController.swift in Sources */,
 				813CA8B11AF84E8000B8EA6C /* SwiftyJSON.swift in Sources */,
 				8153275D1AD5B01C00D8D230 /* SecondViewController.swift in Sources */,
 				81E2ADC21B46303C005DB051 /* TournamentLocationViewController.swift in Sources */,
+				815B4F751B49C55C00CFB735 /* TournamentLocationViewControllerExtension.swift in Sources */,
 				810AA73E1AD6501100E8FF25 /* NavigationController.swift in Sources */,
 				810AA7401AD7741B00E8FF25 /* TextField.swift in Sources */,
 				81E4B9A81AF324AF00A18621 /* TournamentsViewController.swift in Sources */,

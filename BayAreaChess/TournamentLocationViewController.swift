@@ -14,15 +14,15 @@ class TournamentLocationViewController : UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     var myLocation : String = String()
+    var myEventName : String = String()
 
-    let initialLocation = CLLocation(latitude: 37.71, longitude: -122.42)
+    let sanFrancisco = CLLocation(latitude: 37.71, longitude: -122.42)
     
     let regionRadius: CLLocationDistance = 15000
     
     override func viewDidLoad() {
         super.viewDidLoad()
         centerOnPlacemark(myLocation)
-//        centerMapOnLocation(initialLocation)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -37,20 +37,27 @@ class TournamentLocationViewController : UIViewController {
     }
     
     func centerOnPlacemark(address: String) {
-//        var address = "1 Infinite Loop, CA, USA"
         var geocoder = CLGeocoder()
         geocoder.geocodeAddressString(address, completionHandler: {(placemarks: [AnyObject]!, error: NSError!) -> Void in
             if let placemark = placemarks?[0] as? CLPlacemark {
                 
                 let location = placemark.location
-//                var coord : CLLocation = CLLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-                
                 let coordinates = MKCoordinateRegionMakeWithDistance(location.coordinate, self.regionRadius * 2.0, self.regionRadius * 2.0)
                 
+                self.addEventAnnotation(coordinates, eventName: self.myEventName, city: placemark.addressDictionary["City"] as! String)
                 self.mapView.setRegion(coordinates, animated: true)
                 
-
+            }
+            else {
+                self.centerMapOnLocation(self.sanFrancisco)
             }
         })
+    }
+    
+    func addEventAnnotation (coordinate: MKCoordinateRegion, eventName: String, city: String) {
+        let eventAnnotation : TournamentLocationAnnotation = TournamentLocationAnnotation(title: eventName, locationName: city, discipline: "Sculpture", coordinate: CLLocationCoordinate2D(latitude: coordinate.center.latitude, longitude: coordinate.center.longitude))
+        
+        mapView.addAnnotation(eventAnnotation)
+        println("added")
     }
 }

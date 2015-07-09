@@ -39,6 +39,7 @@ class TournamentInformation: UIViewController {
         if (segue.identifier == "tournamentLocation") {
             let vc : TournamentLocationViewController = segue.destinationViewController as! TournamentLocationViewController
             vc.myLocation = self.location
+            vc.myEventName = "Chess Match"
         }
     }
     
