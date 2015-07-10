@@ -56,6 +56,7 @@ class TournamentsViewController : UITableViewController {
             let indexPath = self.tableView.indexPathForSelectedRow()
             viewController.myIndex = indexPath!.row
             viewController.myTID = self.TIDList[indexPath!.row]
+            viewController.myEventName = self.eventList[indexPath!.row]
         }
     }
     

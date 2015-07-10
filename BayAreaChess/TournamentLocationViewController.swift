@@ -22,6 +22,7 @@ class TournamentLocationViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapView.delegate = self
         centerOnPlacemark(myLocation)
     }
     
@@ -58,6 +59,5 @@ class TournamentLocationViewController : UIViewController {
         let eventAnnotation : TournamentLocationAnnotation = TournamentLocationAnnotation(title: eventName, locationName: city, discipline: "Sculpture", coordinate: CLLocationCoordinate2D(latitude: coordinate.center.latitude, longitude: coordinate.center.longitude))
         
         mapView.addAnnotation(eventAnnotation)
-        println("added")
     }
 }

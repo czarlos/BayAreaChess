@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import AddressBook
 
 class TournamentLocationAnnotation: NSObject, MKAnnotation {
     let title: String
@@ -22,6 +23,20 @@ class TournamentLocationAnnotation: NSObject, MKAnnotation {
         self.coordinate = coordinate
         
         super.init()
+    }
+    
+    func mapItem() -> MKMapItem {
+        let addressDictionary = [String(kABPersonAddressStreetKey): subtitle]
+        let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: addressDictionary)
+        
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = title
+        
+        return mapItem
+    }
+    
+    func pinColor() -> MKPinAnnotationColor {
+        return .Green
     }
     
     var subtitle: String {

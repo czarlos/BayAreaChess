@@ -1,18 +1,18 @@
 //
-//  RegistrationViewController.swift
+//  FlyerViewController.swift
 //  BayAreaChess
 //
-//  Created by Carlos Reyes on 7/9/15.
+//  Created by Carlos Reyes on 7/2/15.
 //  Copyright (c) 2015 Carlos Reyes. All rights reserved.
 //
 
 import UIKit
 
-class RegistrationViewController : UIViewController {
+class FlyerViewController : UIViewController {
     
     @IBOutlet weak var webView: UIWebView!
     
-    let url = "http://bayareachess.com/my/grandprix"
+    let url = "http://bayareachess.com/static/pdf/champs15.pdf"
     
     override func viewDidLoad() {
         super.viewDidLoad()

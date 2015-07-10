@@ -16,8 +16,18 @@ class TournamentInformation: UIViewController {
     @IBOutlet var myLocation : UILabel?
     var myIndex : Int = Int()
     var myTID : String = String()
+    var myEventName : String = String()
+    var myRegistrationLink : String = String()
     @IBOutlet var myCaption: UILabel?
     let LOCATION = "location"
+    
+    struct Event {
+        let info : String?
+        let flyer : String?
+        let registration : String?
+        let entries : String?
+        let contact : String?
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +49,7 @@ class TournamentInformation: UIViewController {
         if (segue.identifier == "tournamentLocation") {
             let vc : TournamentLocationViewController = segue.destinationViewController as! TournamentLocationViewController
             vc.myLocation = self.location
-            vc.myEventName = "Chess Match"
+            vc.myEventName = self.myEventName
         }
     }
     
@@ -49,9 +59,10 @@ class TournamentInformation: UIViewController {
             if let data = response.responseObject as? NSData {
                 dispatch_async(dispatch_get_main_queue()) {
                     let json = JSON(data: data)
+                    println(json)
                     self.location = self.getLocation(json)
                     self.myLocation!.text = self.location
-                    //println(json)
+                    self.getDescription(json)
 //                    self.eventList = self.getEventArray(json)
 //                    self.dateList = self.getDateArray(json)
 //                    self.tableView.reloadData()
@@ -66,5 +77,31 @@ class TournamentInformation: UIViewController {
         var location : String? = json[LOCATION].string
         return location != nil ? location! : ""
         
+    }
+    
+    func getDescription(json: JSON) -> String {
+        var description : String? = json["description"].string
+        
+        var m = description?.componentsSeparatedByString("\n")
+        //println(m)
+        var c = toDictionary(m!)
+        
+        self.myRegistrationLink = (c["REGISTER"] != nil ? c["REGISTER"]! : "http://bayareachess.com/mtype/")
+        
+        return description != nil ? description! : ""
+    }
+    
+    func toDictionary(array : Array<String>) -> Dictionary<String, String> {
+        var dict : Dictionary<String, String> = Dictionary()
+        
+        for item in array {
+            var obj = item.componentsSeparatedByString(": ")
+            //println(obj)
+            if (obj.count > 1) {
+                dict[obj[0]] = obj[1]
+            }
+        }
+        
+        return dict
     }
 }
