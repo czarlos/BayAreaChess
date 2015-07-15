@@ -15,6 +15,7 @@ class TournamentLocationViewController : UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     var myLocation : String = String()
     var myEventName : String = String()
+    var myLocationManager : CLLocationManager = CLLocationManager()
 
     let sanFrancisco = CLLocation(latitude: 37.71, longitude: -122.42)
     
@@ -30,6 +31,11 @@ class TournamentLocationViewController : UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         self.tabBarController?.tabBar.hidden = true
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        checkLocationAuthorizationStatus()
     }
     
     func centerMapOnLocation(location: CLLocation) {
@@ -61,4 +67,13 @@ class TournamentLocationViewController : UIViewController {
         
         mapView.addAnnotation(eventAnnotation)
     }
+    
+    func checkLocationAuthorizationStatus() {
+        if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
+            mapView.showsUserLocation = true
+        } else {
+            myLocationManager.requestWhenInUseAuthorization()
+        }
+    }
+    
 }
