@@ -41,6 +41,7 @@ class TournamentInformation: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
+        self.tabBarController?.tabBar.hidden = false
         self.navigationController?.navigationBarHidden = false
         myCaption?.text = String(myIndex)
     }
@@ -59,7 +60,7 @@ class TournamentInformation: UIViewController {
             if let data = response.responseObject as? NSData {
                 dispatch_async(dispatch_get_main_queue()) {
                     let json = JSON(data: data)
-                    println(json)
+//                    println(json)
                     self.location = self.getLocation(json)
                     self.myLocation!.text = self.location
                     self.getDescription(json)
