@@ -19,6 +19,7 @@ class TournamentsViewController : UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.hidesBarsOnSwipe = true
         getTournaments()
     }
     

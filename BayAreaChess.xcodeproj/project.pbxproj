@@ -29,7 +29,11 @@
 		815B4F6F1B49C10300CFB735 /* TournamentLocationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815B4F6E1B49C10300CFB735 /* TournamentLocationAnnotation.swift */; };
 		815B4F751B49C55C00CFB735 /* TournamentLocationViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815B4F741B49C55C00CFB735 /* TournamentLocationViewControllerExtension.swift */; };
 		815B4F771B4F112200CFB735 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815B4F761B4F112200CFB735 /* RegistrationViewController.swift */; };
-		819BB0871B3E0036002C9E2C /* address book@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 819BB0861B3E0036002C9E2C /* address book@2x.png */; };
+		815B4F7F1B55CF9E00CFB735 /* maleuser@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 815B4F7D1B55CF9E00CFB735 /* maleuser@2x.png */; };
+		815B4F801B55CF9E00CFB735 /* monthlycalendar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 815B4F7E1B55CF9E00CFB735 /* monthlycalendar@2x.png */; };
+		815B4F821B55CFC600CFB735 /* settings11@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 815B4F811B55CFC600CFB735 /* settings11@2x.png */; };
+		815B4F891B55D24A00CFB735 /* pic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 815B4F871B55D24A00CFB735 /* pic@2x.png */; };
+		815B4F8A1B55D24A00CFB735 /* settings6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 815B4F881B55D24A00CFB735 /* settings6@2x.png */; };
 		819BB08A1B447844002C9E2C /* TournamentInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819BB0891B447844002C9E2C /* TournamentInformation.swift */; };
 		81E2ADBC1B4624FE005DB051 /* FlyerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E2ADBB1B4624FE005DB051 /* FlyerViewController.swift */; };
 		81E2ADC21B46303C005DB051 /* TournamentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E2ADC11B46303C005DB051 /* TournamentLocationViewController.swift */; };
@@ -102,7 +106,11 @@
 		815B4F6E1B49C10300CFB735 /* TournamentLocationAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentLocationAnnotation.swift; sourceTree = "<group>"; };
 		815B4F741B49C55C00CFB735 /* TournamentLocationViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentLocationViewControllerExtension.swift; sourceTree = "<group>"; };
 		815B4F761B4F112200CFB735 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
-		819BB0861B3E0036002C9E2C /* address book@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "address book@2x.png"; path = "../../../Downloads/free_retina_display_friendly_icons/png/address book@2x.png"; sourceTree = "<group>"; };
+		815B4F7D1B55CF9E00CFB735 /* maleuser@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "maleuser@2x.png"; path = "../../../Downloads/free_retina_display_friendly_icons/money/maleuser@2x.png"; sourceTree = "<group>"; };
+		815B4F7E1B55CF9E00CFB735 /* monthlycalendar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "monthlycalendar@2x.png"; path = "../../../Downloads/free_retina_display_friendly_icons/money/monthlycalendar@2x.png"; sourceTree = "<group>"; };
+		815B4F811B55CFC600CFB735 /* settings11@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings11@2x.png"; path = "../../../Downloads/free_retina_display_friendly_icons/money/settings11@2x.png"; sourceTree = "<group>"; };
+		815B4F871B55D24A00CFB735 /* pic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pic@2x.png"; path = "../../../Downloads/free_retina_display_friendly_icons/money/pic@2x.png"; sourceTree = "<group>"; };
+		815B4F881B55D24A00CFB735 /* settings6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings6@2x.png"; path = "../../../Downloads/free_retina_display_friendly_icons/money/settings6@2x.png"; sourceTree = "<group>"; };
 		819BB0891B447844002C9E2C /* TournamentInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentInformation.swift; sourceTree = "<group>"; };
 		81E2ADBB1B4624FE005DB051 /* FlyerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlyerViewController.swift; sourceTree = "<group>"; };
 		81E2ADC11B46303C005DB051 /* TournamentLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentLocationViewController.swift; sourceTree = "<group>"; };
@@ -151,7 +159,7 @@
 		815327551AD5B01C00D8D230 /* BayAreaChess */ = {
 			isa = PBXGroup;
 			children = (
-				819BB0861B3E0036002C9E2C /* address book@2x.png */,
+				815B4F7C1B55CF6A00CFB735 /* images */,
 				810AA7451AD79A8600E8FF25 /* sample.jpg */,
 				810AA7431AD7995300E8FF25 /* thebay.jpg */,
 				810AA73B1AD5DCA100E8FF25 /* SF.jpg */,
@@ -205,6 +213,18 @@
 				8153276F1AD5B01C00D8D230 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		815B4F7C1B55CF6A00CFB735 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				815B4F871B55D24A00CFB735 /* pic@2x.png */,
+				815B4F881B55D24A00CFB735 /* settings6@2x.png */,
+				815B4F811B55CFC600CFB735 /* settings11@2x.png */,
+				815B4F7D1B55CF9E00CFB735 /* maleuser@2x.png */,
+				815B4F7E1B55CF9E00CFB735 /* monthlycalendar@2x.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 		81E4BA4B1AF40D0E00A18621 /* Products */ = {
@@ -336,12 +356,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				815B4F801B55CF9E00CFB735 /* monthlycalendar@2x.png in Resources */,
 				815327601AD5B01C00D8D230 /* Main.storyboard in Resources */,
+				815B4F821B55CFC600CFB735 /* settings11@2x.png in Resources */,
 				815327651AD5B01C00D8D230 /* LaunchScreen.xib in Resources */,
 				810AA73C1AD5DCA100E8FF25 /* SF.jpg in Resources */,
+				815B4F891B55D24A00CFB735 /* pic@2x.png in Resources */,
 				810AA7441AD7995300E8FF25 /* thebay.jpg in Resources */,
-				819BB0871B3E0036002C9E2C /* address book@2x.png in Resources */,
 				810AA7461AD79A8600E8FF25 /* sample.jpg in Resources */,
+				815B4F8A1B55D24A00CFB735 /* settings6@2x.png in Resources */,
+				815B4F7F1B55CF9E00CFB735 /* maleuser@2x.png in Resources */,
 				815327621AD5B01C00D8D230 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

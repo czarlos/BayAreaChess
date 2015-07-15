@@ -23,6 +23,7 @@ class TournamentLocationViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
+        navigationController?.hidesBarsOnTap = true
         centerOnPlacemark(myLocation)
     }
     
