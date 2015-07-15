@@ -56,10 +56,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if (indexPath.row == 0) {
-            return 350.0
+            return 375.0
         }
         else {
-            return 70.0
+            return 80.0
         }
     }
     

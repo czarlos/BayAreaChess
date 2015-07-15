@@ -40,7 +40,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="taR-KE-8zZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1612" y="-296"/>
+            <point key="canvasLocation" x="1544" y="-956"/>
         </scene>
         <!--Tournaments-->
         <scene sceneID="5b6-9H-cfR">
@@ -666,23 +666,23 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileCell" rowHeight="378" id="94I-WT-Z1M" customClass="ProfileTableViewCell" customModule="BayAreaChess" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileCell" rowHeight="375" id="94I-WT-Z1M" customClass="ProfileTableViewCell" customModule="BayAreaChess" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="94I-WT-Z1M" id="J8m-UK-kLV">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thebay.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Qhe-ut-TsL">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="thebay.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Qhe-ut-TsL">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="219"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qiQ-L2-e6P">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="sample.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qiQ-L2-e6P">
                                                     <rect key="frame" x="60" y="177" width="80" height="80"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="80" id="bkv-Kc-LR3"/>
                                                         <constraint firstAttribute="width" constant="80" id="jon-uQ-IRK"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carlos Reyes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2K-NP-rU3">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Carlos Reyes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2K-NP-rU3">
                                                     <rect key="frame" x="60" y="265" width="230" height="29"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="230" id="RnM-Tj-YIr"/>
@@ -691,7 +691,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@king_snow" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjO-Ey-Twe">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="@king_snow" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjO-Ey-Twe">
                                                     <rect key="frame" x="60" y="288" width="230" height="17"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="17" id="f5O-2V-6bL"/>
@@ -700,7 +700,7 @@
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHW-Tr-HHq">
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHW-Tr-HHq">
                                                     <rect key="frame" x="207" y="270" width="35" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="35" id="mGS-bM-XS9"/>
@@ -709,10 +709,10 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="lK7-KX-wlk" kind="show" id="8Ty-PT-Kbt"/>
+                                                        <action selector="logout:" destination="4K4-e0-Nsf" eventType="touchUpInside" id="YFU-fV-dpo"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULx-2D-Irj">
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULx-2D-Irj">
                                                     <rect key="frame" x="255" y="270" width="35" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="35" id="0Iw-DF-t66"/>
@@ -721,7 +721,7 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gf-6C-BS6">
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gf-6C-BS6">
                                                     <rect key="frame" x="298" y="270" width="35" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="35" id="IfV-pE-cTU"/>
@@ -760,50 +760,38 @@
                                             <outlet property="myProfileImageView" destination="qiQ-L2-e6P" id="8Ph-6C-M3d"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TournamentCell" rowHeight="82" id="IBQ-se-AKd" customClass="TournamentTableViewCell" customModule="BayAreaChess" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TournamentCell" rowHeight="80" id="IBQ-se-AKd" customClass="TournamentTableViewCell" customModule="BayAreaChess" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IBQ-se-AKd" id="lDF-XG-cd6">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tournament Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upc-M5-CPz">
-                                                    <rect key="frame" x="66" y="20" width="163" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tournament Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upc-M5-CPz">
+                                                    <rect key="frame" x="62" y="21" width="200" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nwp-Bt-3RT">
-                                                    <rect key="frame" x="8" y="16" width="50" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="Npb-Q9-FrV"/>
-                                                        <constraint firstAttribute="height" constant="50" id="fQ4-Oa-Flw"/>
-                                                    </constraints>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="settings6.png" translatesAutoresizingMaskIntoConstraints="NO" id="nwp-Bt-3RT">
+                                                    <rect key="frame" x="8" y="21" width="40" height="40"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4K-1e-hof">
-                                                    <rect key="frame" x="66" y="44" width="163" height="22"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="163" id="9I9-sh-kUT"/>
-                                                        <constraint firstAttribute="height" constant="22" id="i19-Ru-ZHh"/>
-                                                    </constraints>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tournament Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4K-1e-hof">
+                                                    <rect key="frame" x="62" y="46" width="200" height="25"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jV-pd-tqH">
+                                                    <rect key="frame" x="298" y="26" width="30" height="30"/>
+                                                    <state key="normal" image="star.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="nwp-Bt-3RT" firstAttribute="top" secondItem="lDF-XG-cd6" secondAttribute="topMargin" constant="8" id="B8I-DR-0oh"/>
-                                                <constraint firstItem="N4K-1e-hof" firstAttribute="trailing" secondItem="upc-M5-CPz" secondAttribute="trailing" id="Bn3-Ba-G1p"/>
-                                                <constraint firstItem="N4K-1e-hof" firstAttribute="leading" secondItem="nwp-Bt-3RT" secondAttribute="trailing" constant="8" symbolic="YES" id="Ea4-Oz-fo6"/>
-                                                <constraint firstItem="N4K-1e-hof" firstAttribute="bottom" secondItem="nwp-Bt-3RT" secondAttribute="bottom" id="QTA-LA-g28"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="nwp-Bt-3RT" secondAttribute="bottom" constant="7" id="Qjh-u4-23c"/>
-                                                <constraint firstItem="N4K-1e-hof" firstAttribute="leading" secondItem="upc-M5-CPz" secondAttribute="leading" id="TgL-N3-IOf"/>
-                                                <constraint firstItem="N4K-1e-hof" firstAttribute="top" secondItem="upc-M5-CPz" secondAttribute="bottom" constant="3" id="hql-Tl-ret"/>
-                                                <constraint firstItem="nwp-Bt-3RT" firstAttribute="leading" secondItem="lDF-XG-cd6" secondAttribute="leadingMargin" id="o2E-RV-dSQ"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="myDate" destination="N4K-1e-hof" id="1zM-PD-Yw5"/>
-                                            <outlet property="myImage" destination="nwp-Bt-3RT" id="1r0-eG-e26"/>
+                                            <outlet property="myImage" destination="nwp-Bt-3RT" id="5g4-3U-yEg"/>
                                             <outlet property="myTournamentName" destination="upc-M5-CPz" id="zDd-Xg-aLr"/>
                                         </connections>
                                     </tableViewCell>
@@ -844,6 +832,7 @@
         <image name="sample.jpg" width="200" height="200"/>
         <image name="settings11.png" width="64" height="64"/>
         <image name="settings6.png" width="64" height="64"/>
+        <image name="star.png" width="64" height="64"/>
         <image name="thebay.jpg" width="2592" height="736"/>
     </resources>
 </document>
