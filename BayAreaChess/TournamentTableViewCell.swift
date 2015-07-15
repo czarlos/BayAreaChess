@@ -12,7 +12,7 @@ class TournamentTableViewCell : UITableViewCell {
     @IBOutlet var myImage : UIImageView!
     @IBOutlet var myTournamentName : UILabel!
     @IBOutlet var myDate : UILabel!
-//    @IBOutlet var myStar : UIButton!
+    @IBOutlet var myStar : UIButton!
     
     internal func configure(text: String, date: String, imageName: String) {
         myTournamentName.text = text

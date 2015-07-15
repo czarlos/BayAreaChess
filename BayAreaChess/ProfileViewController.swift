@@ -1,30 +1,28 @@
 //
-//  FirstViewController.swift
+//  ProfileViewController.swift
 //  BayAreaChess
 //
-//  Created by Carlos Reyes on 4/8/15.
+//  Created by Carlos Reyes on 7/15/15.
 //  Copyright (c) 2015 Carlos Reyes. All rights reserved.
 //
 
 import UIKit
 
-class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    @IBOutlet weak var scrollView: UIScrollView!
+class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     @IBOutlet var tableView: UITableView!
     
-    var items: [String] = ["We", "Heart", "Swift"]
+    var items: [String] = ["Wimbledon", "Roland-Garros", "US Open", "Australian Open"]
+    var dates: [String] = ["June/July", "May/June", "August/September", "January"]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.contentSize.height = 1000
         navigationController?.hidesBarsOnSwipe = true
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -38,14 +36,31 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.items.count
+        return self.items.count+1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        var cell : TournamentTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("TournamentCell") as! TournamentTableViewCell
-        var cell : TournamentTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("TournamentCell", forIndexPath: indexPath) as! TournamentTableViewCell
-        cell.configure(items[indexPath.row], date: "06/01/1992", imageName: "settings6.png")
-        return cell
+        if (indexPath.row == 0) {
+            var cell : ProfileTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("ProfileCell") as! ProfileTableViewCell
+            cell.userInteractionEnabled = false
+            cell.configure("Carlos", imageName: "sample.jpg")
+            return cell
+        }
+        else {
+            var cell : TournamentTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("TournamentCell", forIndexPath: indexPath) as! TournamentTableViewCell
+            cell.configure(items[indexPath.row-1], date: dates[indexPath.row-1], imageName: "settings6.png")
+            return cell
+        }
+
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if (indexPath.row == 0) {
+            return 350.0
+        }
+        else {
+            return 70.0
+        }
     }
     
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
