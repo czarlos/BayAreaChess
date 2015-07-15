@@ -16,6 +16,8 @@
 		8115EFC81AF88A8000280411 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8115EFC71AF88A8000280411 /* Constants.swift */; };
 		81291FE81AE09B4900793FC6 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81291FE71AE09B4900793FC6 /* LandingViewController.swift */; };
 		81291FEA1AE09ECA00793FC6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81291FE91AE09ECA00793FC6 /* SignUpViewController.swift */; };
+		813B1F2E1B5604C50099F440 /* TournamentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813B1F2D1B5604C40099F440 /* TournamentTableViewCell.swift */; };
+		813B1F301B5608A00099F440 /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 813B1F2F1B5608A00099F440 /* star@2x.png */; };
 		813CA8B11AF84E8000B8EA6C /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813CA8B01AF84E8000B8EA6C /* SwiftyJSON.swift */; };
 		81483A651B3A088500DEE874 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81483A641B3A088500DEE874 /* EditProfileViewController.swift */; };
 		815327591AD5B01C00D8D230 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815327581AD5B01C00D8D230 /* AppDelegate.swift */; };
@@ -89,6 +91,8 @@
 		8115EFC71AF88A8000280411 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../Constants.swift; sourceTree = "<group>"; };
 		81291FE71AE09B4900793FC6 /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		81291FE91AE09ECA00793FC6 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		813B1F2D1B5604C40099F440 /* TournamentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentTableViewCell.swift; sourceTree = "<group>"; };
+		813B1F2F1B5608A00099F440 /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "star@2x.png"; path = "../../../Downloads/free_retina_display_friendly_icons/money/star@2x.png"; sourceTree = "<group>"; };
 		813CA8B01AF84E8000B8EA6C /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = ../../../Desktop/SwiftyJSON/Source/SwiftyJSON.swift; sourceTree = "<group>"; };
 		81483A641B3A088500DEE874 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		815327531AD5B01C00D8D230 /* BayAreaChess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BayAreaChess.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +190,7 @@
 				81483A641B3A088500DEE874 /* EditProfileViewController.swift */,
 				819BB0891B447844002C9E2C /* TournamentInformation.swift */,
 				815B4F741B49C55C00CFB735 /* TournamentLocationViewControllerExtension.swift */,
+				813B1F2D1B5604C40099F440 /* TournamentTableViewCell.swift */,
 			);
 			path = BayAreaChess;
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 		815B4F7C1B55CF6A00CFB735 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				813B1F2F1B5608A00099F440 /* star@2x.png */,
 				815B4F871B55D24A00CFB735 /* pic@2x.png */,
 				815B4F881B55D24A00CFB735 /* settings6@2x.png */,
 				815B4F811B55CFC600CFB735 /* settings11@2x.png */,
@@ -362,6 +368,7 @@
 				815327651AD5B01C00D8D230 /* LaunchScreen.xib in Resources */,
 				810AA73C1AD5DCA100E8FF25 /* SF.jpg in Resources */,
 				815B4F891B55D24A00CFB735 /* pic@2x.png in Resources */,
+				813B1F301B5608A00099F440 /* star@2x.png in Resources */,
 				810AA7441AD7995300E8FF25 /* thebay.jpg in Resources */,
 				810AA7461AD79A8600E8FF25 /* sample.jpg in Resources */,
 				815B4F8A1B55D24A00CFB735 /* settings6@2x.png in Resources */,
@@ -384,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				813B1F2E1B5604C50099F440 /* TournamentTableViewCell.swift in Sources */,
 				81483A651B3A088500DEE874 /* EditProfileViewController.swift in Sources */,
 				8153277B1AD5B8EA00D8D230 /* LoginViewController.swift in Sources */,
 				815B4F771B4F112200CFB735 /* RegistrationViewController.swift in Sources */,
