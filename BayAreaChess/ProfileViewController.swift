@@ -42,7 +42,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if (indexPath.row == 0) {
             var cell : ProfileTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("ProfileCell") as! ProfileTableViewCell
-            cell.userInteractionEnabled = false
+//            cell.userInteractionEnabled = false
+            cell.myLogoutButton.addTarget(self, action: "logout", forControlEvents: .TouchUpInside)
             cell.configure("Carlos", imageName: "sample.jpg")
             return cell
         }
@@ -67,9 +68,11 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         println(indexPath.row)
     }
     
-    @IBAction func logout (sender: UIButton) {
+    func logout() {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.removeObjectForKey("carlos")
         self.performSegueWithIdentifier("logout", sender: self)
     }
+    
+    
 }

@@ -12,6 +12,7 @@ class ProfileTableViewCell : UITableViewCell {
     
     @IBOutlet var myProfileImageView : UIImageView!
     @IBOutlet var myName : UILabel!
+    @IBOutlet var myLogoutButton : UIButton!
     
     
     override func awakeFromNib() {
@@ -23,4 +24,5 @@ class ProfileTableViewCell : UITableViewCell {
         myName.text = name
         myProfileImageView.image = UIImage(named: imageName)
     }
+
 }
