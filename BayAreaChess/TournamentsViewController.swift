@@ -38,13 +38,14 @@ class TournamentsViewController : UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let item: AnyObject = self.eventList[indexPath.row]
         
-        var cell = tableView.dequeueReusableCellWithIdentifier(Constants.Identifier.UI_TABLE_VIEW_CELL) as! UITableViewCell
-        cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: Constants.Identifier.UI_TABLE_VIEW_CELL);
-        
-        cell.textLabel!.text = item as? String
-        cell.detailTextLabel?.text = self.dateList[indexPath.row]
+        var cell : TournamentTableViewCell = tableView.dequeueReusableCellWithIdentifier("TournamentCell", forIndexPath: indexPath) as! TournamentTableViewCell
+        cell.configure((item as? String)!, date: self.dateList[indexPath.row], imageName: "thebay.jpg")
                 
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 80.0
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
