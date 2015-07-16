@@ -29,6 +29,7 @@ class TournamentsViewController : UITableViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.hidden = false
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,6 +61,7 @@ class TournamentsViewController : UITableViewController {
             viewController.myIndex = indexPath!.row
             viewController.myTID = self.TIDList[indexPath!.row]
             viewController.myEventName = self.eventList[indexPath!.row]
+            viewController.myDateLabel?.text = self.dateList[indexPath!.row]
         }
     }
     

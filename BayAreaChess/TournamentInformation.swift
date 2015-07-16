@@ -16,6 +16,8 @@ class TournamentInformation: UIViewController {
     
     @IBOutlet var myLocationButton : UIButton?
     @IBOutlet var myTournamentNameLabel : UILabel?
+    @IBOutlet var myDateLabel : UILabel?
+    @IBOutlet var myDescriptionTextView : UITextView?
     
     var myIndex : Int = Int()
     var myTID : String = String()
@@ -61,6 +63,7 @@ class TournamentInformation: UIViewController {
         super.viewWillAppear(true)
         self.tabBarController?.tabBar.hidden = true
         self.navigationController?.navigationBarHidden = false
+        self.navigationController?.hidesBarsOnTap = false
         myCaption?.text = String(myIndex)
         self.mapView.zoomEnabled = false
         self.mapView.scrollEnabled = false
@@ -131,6 +134,7 @@ class TournamentInformation: UIViewController {
     func loadJSON(json: JSON) {
         self.myLocation = self.getLocation(json)
         self.myLocationButton?.setTitle(self.myLocation, forState: UIControlState.Disabled)
+        self.myDescriptionTextView?.text = self.getDescription(json)
     }
     
     //Maps support
