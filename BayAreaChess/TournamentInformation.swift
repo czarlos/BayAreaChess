@@ -14,7 +14,7 @@ import CoreLocation
 
 class TournamentInformation: UIViewController {
     
-    @IBOutlet var myLocationButton : UIButton?
+    @IBOutlet var myLocationLabel : UILabel?
     @IBOutlet var myTournamentNameLabel : UILabel?
     @IBOutlet var myDateLabel : UILabel?
     @IBOutlet var myDescriptionTextView : UITextView?
@@ -25,6 +25,7 @@ class TournamentInformation: UIViewController {
     var myRegistrationLink : String = String()
     @IBOutlet var myCaption: UILabel?
     let LOCATION = "location"
+    var myDate: String = String()
     
     @IBOutlet weak var mapView: MKMapView!
     var myLocation : String = String()
@@ -46,6 +47,7 @@ class TournamentInformation: UIViewController {
         mapView.delegate = self
         navigationController?.hidesBarsOnTap = true
         myTournamentNameLabel?.text = myEventName
+        myDateLabel?.text = myDate
 //        centerOnPlacemark(myLocation)
         
     }
@@ -64,18 +66,11 @@ class TournamentInformation: UIViewController {
         self.tabBarController?.tabBar.hidden = true
         self.navigationController?.navigationBarHidden = false
         self.navigationController?.hidesBarsOnTap = false
+        self.navigationController?.hidesBarsOnSwipe = false
         myCaption?.text = String(myIndex)
         self.mapView.zoomEnabled = false
         self.mapView.scrollEnabled = false
     }
-    
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if (segue.identifier == "tournamentLocation") {
-//            let vc : TournamentLocationViewController = segue.destinationViewController as! TournamentLocationViewController
-//            vc.myLocation = self.location
-//            vc.myEventName = self.myEventName
-//        }
-//    }
     
     func getTournamentData(tid: String) {
         var request = HTTPTask()
@@ -85,12 +80,6 @@ class TournamentInformation: UIViewController {
                     let json = JSON(data: data)
                     self.loadJSON(json)
                     self.centerOnPlacemark(self.myLocation)
-//                    println(json)
-//                    self.location = self.getLocation(json)
-//                    self.myLocation!.text = self.location
-//                    self.getDescription(json)
-//                    self.eventList = self.getEventArray(json)
-//                    self.dateList = self.getDateArray(json)
 //                    self.tableView.reloadData()
                 }
             }
@@ -109,7 +98,6 @@ class TournamentInformation: UIViewController {
         var description : String? = json["description"].string
         
         var m = description?.componentsSeparatedByString("\n")
-        //println(m)
         var c = toDictionary(m!)
         
         self.myRegistrationLink = (c["REGISTER"] != nil ? c["REGISTER"]! : "http://bayareachess.com/mtype/")
@@ -122,7 +110,6 @@ class TournamentInformation: UIViewController {
         
         for item in array {
             var obj = item.componentsSeparatedByString(": ")
-            //println(obj)
             if (obj.count > 1) {
                 dict[obj[0]] = obj[1]
             }
@@ -133,7 +120,7 @@ class TournamentInformation: UIViewController {
     
     func loadJSON(json: JSON) {
         self.myLocation = self.getLocation(json)
-        self.myLocationButton?.setTitle(self.myLocation, forState: UIControlState.Disabled)
+        self.myLocationLabel?.text = self.myLocation
         self.myDescriptionTextView?.text = self.getDescription(json)
     }
     
