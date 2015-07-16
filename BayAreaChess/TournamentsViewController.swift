@@ -40,7 +40,7 @@ class TournamentsViewController : UITableViewController {
         
         var cell : TournamentTableViewCell = tableView.dequeueReusableCellWithIdentifier("TournamentCell", forIndexPath: indexPath) as! TournamentTableViewCell
         cell.configure((item as? String)!, date: self.dateList[indexPath.row], imageName: "thebay.jpg")
-                
+        
         return cell
     }
     
@@ -49,6 +49,7 @@ class TournamentsViewController : UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        println(indexPath.row)
         self.performSegueWithIdentifier("specificTournament", sender: self)
     }
     

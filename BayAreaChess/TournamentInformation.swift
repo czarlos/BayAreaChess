@@ -9,17 +9,26 @@
 import UIKit
 import SwiftHTTP
 import AddressBook
+import MapKit
+import CoreLocation
 
 class TournamentInformation: UIViewController {
     
-    var location : String = String()
-    @IBOutlet var myLocation : UILabel?
+    @IBOutlet var myLocationButton : UIButton?
+    @IBOutlet var myTournamentNameLabel : UILabel?
+    
     var myIndex : Int = Int()
     var myTID : String = String()
     var myEventName : String = String()
     var myRegistrationLink : String = String()
     @IBOutlet var myCaption: UILabel?
     let LOCATION = "location"
+    
+    @IBOutlet weak var mapView: MKMapView!
+    var myLocation : String = String()
+    var myLocationManager : CLLocationManager = CLLocationManager()
+    let sanFrancisco = CLLocation(latitude: 37.71, longitude: -122.42)
+    let regionRadius: CLLocationDistance = 15000
     
     struct Event {
         let info : String?
@@ -32,27 +41,38 @@ class TournamentInformation: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.getTournamentData(myTID)
+        mapView.delegate = self
+        navigationController?.hidesBarsOnTap = true
+        myTournamentNameLabel?.text = myEventName
+//        centerOnPlacemark(myLocation)
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        checkLocationAuthorizationStatus()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
-        self.tabBarController?.tabBar.hidden = false
+        self.tabBarController?.tabBar.hidden = true
         self.navigationController?.navigationBarHidden = false
         myCaption?.text = String(myIndex)
+        self.mapView.zoomEnabled = false
+        self.mapView.scrollEnabled = false
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "tournamentLocation") {
-            let vc : TournamentLocationViewController = segue.destinationViewController as! TournamentLocationViewController
-            vc.myLocation = self.location
-            vc.myEventName = self.myEventName
-        }
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if (segue.identifier == "tournamentLocation") {
+//            let vc : TournamentLocationViewController = segue.destinationViewController as! TournamentLocationViewController
+//            vc.myLocation = self.location
+//            vc.myEventName = self.myEventName
+//        }
+//    }
     
     func getTournamentData(tid: String) {
         var request = HTTPTask()
@@ -60,10 +80,12 @@ class TournamentInformation: UIViewController {
             if let data = response.responseObject as? NSData {
                 dispatch_async(dispatch_get_main_queue()) {
                     let json = JSON(data: data)
+                    self.loadJSON(json)
+                    self.centerOnPlacemark(self.myLocation)
 //                    println(json)
-                    self.location = self.getLocation(json)
-                    self.myLocation!.text = self.location
-                    self.getDescription(json)
+//                    self.location = self.getLocation(json)
+//                    self.myLocation!.text = self.location
+//                    self.getDescription(json)
 //                    self.eventList = self.getEventArray(json)
 //                    self.dateList = self.getDateArray(json)
 //                    self.tableView.reloadData()
@@ -92,7 +114,7 @@ class TournamentInformation: UIViewController {
         return description != nil ? description! : ""
     }
     
-    func toDictionary(array : Array<String>) -> Dictionary<String, String> {
+    func toDictionary(array: Array<String>) -> Dictionary<String, String> {
         var dict : Dictionary<String, String> = Dictionary()
         
         for item in array {
@@ -105,4 +127,50 @@ class TournamentInformation: UIViewController {
         
         return dict
     }
+    
+    func loadJSON(json: JSON) {
+        self.myLocation = self.getLocation(json)
+        self.myLocationButton?.setTitle(self.myLocation, forState: UIControlState.Disabled)
+    }
+    
+    //Maps support
+    
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
+            regionRadius * 2.0, regionRadius * 2.0)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
+    func centerOnPlacemark(address: String) {
+        var geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(address, completionHandler: {(placemarks: [AnyObject]!, error: NSError!) -> Void in
+            if let placemark = placemarks?[0] as? CLPlacemark {
+                
+                let location = placemark.location
+                let coordinates = MKCoordinateRegionMakeWithDistance(location.coordinate, self.regionRadius * 2.0, self.regionRadius * 2.0)
+                
+                self.addEventAnnotation(coordinates, eventName: self.myEventName, city: placemark.addressDictionary["City"] as! String)
+                self.mapView.setRegion(coordinates, animated: true)
+                
+            }
+            else {
+                self.centerMapOnLocation(self.sanFrancisco)
+            }
+        })
+    }
+    
+    func addEventAnnotation (coordinate: MKCoordinateRegion, eventName: String, city: String) {
+        let eventAnnotation : TournamentLocationAnnotation = TournamentLocationAnnotation(title: eventName, locationName: city, discipline: "Sculpture", coordinate: CLLocationCoordinate2D(latitude: coordinate.center.latitude, longitude: coordinate.center.longitude))
+        
+        mapView.addAnnotation(eventAnnotation)
+    }
+    
+    func checkLocationAuthorizationStatus() {
+        if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
+            mapView.showsUserLocation = true
+        } else {
+            myLocationManager.requestWhenInUseAuthorization()
+        }
+    }
+    
 }
