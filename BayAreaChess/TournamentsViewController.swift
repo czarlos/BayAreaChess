@@ -20,6 +20,8 @@ class TournamentsViewController : UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.hidesBarsOnSwipe = true
+        self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -128,6 +130,12 @@ class TournamentsViewController : UITableViewController {
             TIDs.append((item[ID]).string!)
         }
         return TIDs
+    }
+    
+    func refresh(sender: AnyObject) {
+        getTournaments()
+        self.tableView.reloadData()
+        self.refreshControl?.endRefreshing()
     }
     
 }
