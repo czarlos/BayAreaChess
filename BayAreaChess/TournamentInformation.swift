@@ -54,6 +54,7 @@ class TournamentInformation: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
         checkLocationAuthorizationStatus()
     }
 

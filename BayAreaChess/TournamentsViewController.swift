@@ -30,6 +30,12 @@ class TournamentsViewController : UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.hidden = false
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 34/255, green: 94/255, blue: 158/255, alpha: 1)
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
+//        self.tabBarController?.tabBar.barTintColor = UIColor(red: 34/255, green: 94/255, blue: 158/255, alpha: 1)
+
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
