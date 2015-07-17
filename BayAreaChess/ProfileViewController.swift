@@ -44,7 +44,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             var cell : ProfileTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("ProfileCell") as! ProfileTableViewCell
 //            cell.userInteractionEnabled = false
             cell.myLogoutButton.addTarget(self, action: "logout", forControlEvents: .TouchUpInside)
-            cell.configure("Carlos", imageName: "sample.jpg")
+            cell.configure("Carlos Reyes", subtitleName:"@theCzarlos", imageName: "sample.jpg")
             return cell
         }
         else {

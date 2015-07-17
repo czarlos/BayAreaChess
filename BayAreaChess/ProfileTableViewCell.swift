@@ -12,6 +12,7 @@ class ProfileTableViewCell : UITableViewCell {
     
     @IBOutlet var myProfileImageView : UIImageView!
     @IBOutlet var myName : UILabel!
+    @IBOutlet var mySubtitleName: UILabel!
     @IBOutlet var myLogoutButton : UIButton!
     
     
@@ -20,8 +21,9 @@ class ProfileTableViewCell : UITableViewCell {
         myProfileImageView.layer.borderWidth = 2.0
     }
     
-    func configure(name : String, imageName : String) {
+    func configure(name : String, subtitleName: String, imageName : String) {
         myName.text = name
+        mySubtitleName.text = subtitleName
         myProfileImageView.image = UIImage(named: imageName)
     }
 
