@@ -10,10 +10,10 @@ import UIKit
 
 class ProfileTableViewCell : UITableViewCell {
     
-    @IBOutlet var myProfileImageView : UIImageView!
-    @IBOutlet var myName : UILabel!
-    @IBOutlet var mySubtitleName: UILabel!
     @IBOutlet var myLogoutButton : UIButton!
+    @IBOutlet var myName : UILabel!
+    @IBOutlet var myProfileImageView : UIImageView!
+    @IBOutlet var mySubtitleName: UILabel!
     
     override func awakeFromNib() {
         myProfileImageView.layer.borderColor = UIColor.whiteColor().CGColor

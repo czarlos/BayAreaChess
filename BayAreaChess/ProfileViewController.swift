@@ -12,9 +12,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet var tableView: UITableView!
     
-    var items: [String] = ["Wimbledon", "Roland-Garros", "US Open", "Australian Open"]
     var dates: [String] = ["June/July", "May/June", "August/September", "January"]
-    
+    var items: [String] = ["Wimbledon", "Roland-Garros", "US Open", "Australian Open"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

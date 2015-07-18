@@ -9,6 +9,7 @@
 import UIKit
 
 class NavigationController : UINavigationController {
+    
     override func viewDidLoad() {
         let swiftColor : UIColor = Constants.Color.ThemeBlue
         self.navigationBar.barTintColor = swiftColor
@@ -17,6 +18,7 @@ class NavigationController : UINavigationController {
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
         super.viewDidLoad()
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

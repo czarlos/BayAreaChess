@@ -10,18 +10,16 @@ import UIKit
 import SwiftHTTP
 
 class TournamentsViewController : UITableViewController {
-    var items = ["foo", "bar", "baz"]
-    var eventList = [String]()
+    
     var dateList = [String]()
+    var eventList = [String]()
+    var items = ["foo", "bar", "baz"]
     var TIDList = [String]()
-    let SUMMARY = "summary"
-    let ID = "id"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.hidesBarsOnSwipe = true
         self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
-
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -42,7 +40,7 @@ class TournamentsViewController : UITableViewController {
         let item: AnyObject = self.eventList[indexPath.row]
         
         var cell : TournamentTableViewCell = tableView.dequeueReusableCellWithIdentifier(Constants.Identifier.TournamentCell, forIndexPath: indexPath) as! TournamentTableViewCell
-        cell.configure((item as? String)!, date: self.dateList[indexPath.row], imageName: "thebay.jpg")
+        cell.configure((item as? String)!, date: self.dateList[indexPath.row], imageName: Constants.Image.ProfileBackground)
         
         return cell
     }
@@ -87,7 +85,7 @@ class TournamentsViewController : UITableViewController {
     func getDateArray(json: JSON) -> [String] {
         var dateArray : [String] = []
         for i in json.arrayValue {
-            var item = i["start"]["dateTime"]
+            var item = i[Constants.Key.Start][Constants.Key.DateTime]
             var formatter: NSDateFormatter = NSDateFormatter()
             formatter.dateFormat = Constants.Date.GoogleCalendarFormat
             var date : NSDate = NSDate()
@@ -113,7 +111,7 @@ class TournamentsViewController : UITableViewController {
     func getEventArray(json: JSON) -> [String] {
         var events : [String] = []
         for item in json.arrayValue {
-            events.append((item[SUMMARY]).string!)
+            events.append((item[Constants.Key.Summary]).string!)
         }
         return events
     }
@@ -121,7 +119,7 @@ class TournamentsViewController : UITableViewController {
     func getTIDArray(json: JSON) -> [String] {
         var TIDs : [String] = []
         for item in json.arrayValue {
-            TIDs.append((item[ID]).string!)
+            TIDs.append((item[Constants.Key.ID]).string!)
         }
         return TIDs
     }

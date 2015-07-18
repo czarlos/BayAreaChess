@@ -9,6 +9,7 @@
 import UIKit
 
 class TextField : UITextField {
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         var border = CALayer()

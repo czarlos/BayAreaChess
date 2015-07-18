@@ -9,6 +9,7 @@
 import UIKit
 
 class Constants {
+    
     struct URL {
         static let BASE = "http://localhost:3000/api/v1/" //"http://bac.colab.duke.edu:3000/api/v1/"
         static let GENERAL_TOURNAMENTS = BASE + "tournaments/general"
@@ -45,5 +46,16 @@ class Constants {
     struct Cell {
         static let ProfileCellSize: CGFloat = 375.0
         static let TournamentCellSize: CGFloat = 80.0
+    }
+    struct Key {
+        static let Description = "description"
+        static let Summary = "summary"
+        static let ID = "id"
+        static let Start = "start"
+        static let Register = "REGISTER"
+        static let DateTime = "dateTime"
+    }
+    struct Image {
+        static let ProfileBackground = "thebay.jpg"
     }
 }

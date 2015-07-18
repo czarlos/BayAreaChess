@@ -6,15 +6,16 @@
 //  Copyright (c) 2015 Carlos Reyes. All rights reserved.
 //
 
-import UIKit
-import MapKit
 import AddressBook
+import MapKit
+import UIKit
 
 class TournamentLocationAnnotation: NSObject, MKAnnotation {
-    let title: String
-    let locationName: String
-    let discipline: String
+    
     let coordinate: CLLocationCoordinate2D
+    let discipline: String
+    let locationName: String
+    let title: String
     
     init(title: String, locationName: String, discipline: String, coordinate: CLLocationCoordinate2D) {
         self.title = title

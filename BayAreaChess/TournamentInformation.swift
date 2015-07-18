@@ -6,31 +6,31 @@
 //  Copyright (c) 2015 Carlos Reyes. All rights reserved.
 //
 
-import UIKit
-import SwiftHTTP
 import AddressBook
-import MapKit
 import CoreLocation
+import MapKit
+import SwiftHTTP
+import UIKit
 
 class TournamentInformation: UIViewController {
     
-    @IBOutlet var myLocationLabel : UILabel?
-    @IBOutlet var myTournamentNameLabel : UILabel?
+    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet var myDateLabel : UILabel?
     @IBOutlet var myDescriptionTextView : UITextView?
     @IBOutlet var myCaption: UILabel?
+    @IBOutlet var myLocationLabel : UILabel?
+    @IBOutlet var myTournamentNameLabel : UILabel?
 
-    var myIndex : Int = Int()
-    var myTID : String = String()
-    var myEventName : String = String()
-    var myRegistrationLink : String = String()
     var myDate: String = String()
-    
-    @IBOutlet weak var mapView: MKMapView!
+    var myEventName : String = String()
+    var myIndex : Int = Int()
     var myLocation : String = String()
     var myLocationManager : CLLocationManager = CLLocationManager()
-    let sanFrancisco = CLLocation(latitude: 37.71, longitude: -122.42)
+    var myRegistrationLink : String = String()
+    var myTID : String = String()
+
     let regionRadius: CLLocationDistance = 15000
+    let sanFrancisco = CLLocation(latitude: 37.71, longitude: -122.42)
     
     struct Event {
         let info : String?
@@ -95,12 +95,12 @@ class TournamentInformation: UIViewController {
     }
     
     func getDescription(json: JSON) -> String {
-        var description : String? = json["description"].string
+        var description : String? = json[Constants.Key.Description].string
         
         var m = description?.componentsSeparatedByString("\n")
         var c = toDictionary(m!)
         
-        self.myRegistrationLink = (c["REGISTER"] != nil ? c["REGISTER"]! : "http://bayareachess.com/mtype/")
+        self.myRegistrationLink = (c[Constants.Key.Register] != nil ? c[Constants.Key.Register]! : "http://bayareachess.com/mtype/")
         
         return description != nil ? description! : ""
     }

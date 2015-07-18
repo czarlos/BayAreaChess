@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Carlos Reyes. All rights reserved.
 //
 
-import UIKit
-import MapKit
 import CoreLocation
+import MapKit
+import UIKit
 
 class TournamentLocationViewController : UIViewController {
     
