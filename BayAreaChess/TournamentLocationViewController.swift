@@ -13,12 +13,12 @@ import CoreLocation
 class TournamentLocationViewController : UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
+    
     var myLocation : String = String()
     var myEventName : String = String()
     var myLocationManager : CLLocationManager = CLLocationManager()
 
     let sanFrancisco = CLLocation(latitude: 37.71, longitude: -122.42)
-    
     let regionRadius: CLLocationDistance = 15000
     
     override func viewDidLoad() {
@@ -52,7 +52,7 @@ class TournamentLocationViewController : UIViewController {
                 let location = placemark.location
                 let coordinates = MKCoordinateRegionMakeWithDistance(location.coordinate, self.regionRadius * 2.0, self.regionRadius * 2.0)
                 
-                self.addEventAnnotation(coordinates, eventName: self.myEventName, city: placemark.addressDictionary["City"] as! String)
+                self.addEventAnnotation(coordinates, eventName: self.myEventName, city: placemark.addressDictionary[Constants.Location.City] as! String)
                 self.mapView.setRegion(coordinates, animated: true)
                 
             }
@@ -63,7 +63,7 @@ class TournamentLocationViewController : UIViewController {
     }
     
     func addEventAnnotation (coordinate: MKCoordinateRegion, eventName: String, city: String) {
-        let eventAnnotation : TournamentLocationAnnotation = TournamentLocationAnnotation(title: eventName, locationName: city, discipline: "Sculpture", coordinate: CLLocationCoordinate2D(latitude: coordinate.center.latitude, longitude: coordinate.center.longitude))
+        let eventAnnotation : TournamentLocationAnnotation = TournamentLocationAnnotation(title: eventName, locationName: city, discipline: Constants.Location.Sculpture, coordinate: CLLocationCoordinate2D(latitude: coordinate.center.latitude, longitude: coordinate.center.longitude))
         
         mapView.addAnnotation(eventAnnotation)
     }

@@ -18,13 +18,12 @@ class TournamentInformation: UIViewController {
     @IBOutlet var myTournamentNameLabel : UILabel?
     @IBOutlet var myDateLabel : UILabel?
     @IBOutlet var myDescriptionTextView : UITextView?
-    
+    @IBOutlet var myCaption: UILabel?
+
     var myIndex : Int = Int()
     var myTID : String = String()
     var myEventName : String = String()
     var myRegistrationLink : String = String()
-    @IBOutlet var myCaption: UILabel?
-    let LOCATION = "location"
     var myDate: String = String()
     
     @IBOutlet weak var mapView: MKMapView!
@@ -90,7 +89,7 @@ class TournamentInformation: UIViewController {
     }
     
     func getLocation(json: JSON) -> String {
-        var location : String? = json[LOCATION].string
+        var location : String? = json[Constants.Location.Location].string
         return location != nil ? location! : ""
         
     }
@@ -141,7 +140,7 @@ class TournamentInformation: UIViewController {
                 let location = placemark.location
                 let coordinates = MKCoordinateRegionMakeWithDistance(location.coordinate, self.regionRadius * 2.0, self.regionRadius * 2.0)
                 
-                self.addEventAnnotation(coordinates, eventName: self.myEventName, city: placemark.addressDictionary["City"] as! String)
+                self.addEventAnnotation(coordinates, eventName: self.myEventName, city: placemark.addressDictionary[Constants.Location.City] as! String)
                 self.mapView.setRegion(coordinates, animated: true)
                 
             }
@@ -152,7 +151,7 @@ class TournamentInformation: UIViewController {
     }
     
     func addEventAnnotation (coordinate: MKCoordinateRegion, eventName: String, city: String) {
-        let eventAnnotation : TournamentLocationAnnotation = TournamentLocationAnnotation(title: eventName, locationName: city, discipline: "Sculpture", coordinate: CLLocationCoordinate2D(latitude: coordinate.center.latitude, longitude: coordinate.center.longitude))
+        let eventAnnotation : TournamentLocationAnnotation = TournamentLocationAnnotation(title: eventName, locationName: city, discipline: Constants.Location.Sculpture, coordinate: CLLocationCoordinate2D(latitude: coordinate.center.latitude, longitude: coordinate.center.longitude))
         
         mapView.addAnnotation(eventAnnotation)
     }

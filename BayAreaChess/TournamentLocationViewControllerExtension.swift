@@ -13,7 +13,7 @@ extension TournamentLocationViewController: MKMapViewDelegate {
     
     func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
         if let annotation = annotation as? TournamentLocationAnnotation {
-            let identifier = "pin"
+            let identifier = Constants.Location.Pin
             var view: MKPinAnnotationView
             if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
                 as? MKPinAnnotationView {

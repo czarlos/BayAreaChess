@@ -10,7 +10,6 @@
 		810AA73C1AD5DCA100E8FF25 /* SF.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810AA73B1AD5DCA100E8FF25 /* SF.jpg */; };
 		810AA73E1AD6501100E8FF25 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810AA73D1AD6501100E8FF25 /* NavigationController.swift */; };
 		810AA7401AD7741B00E8FF25 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810AA73F1AD7741B00E8FF25 /* TextField.swift */; };
-		810AA7421AD78C9200E8FF25 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810AA7411AD78C9200E8FF25 /* InitialViewController.swift */; };
 		810AA7441AD7995300E8FF25 /* thebay.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810AA7431AD7995300E8FF25 /* thebay.jpg */; };
 		810AA7461AD79A8600E8FF25 /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810AA7451AD79A8600E8FF25 /* sample.jpg */; };
 		8115EFC81AF88A8000280411 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8115EFC71AF88A8000280411 /* Constants.swift */; };
@@ -21,8 +20,6 @@
 		813CA8B11AF84E8000B8EA6C /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813CA8B01AF84E8000B8EA6C /* SwiftyJSON.swift */; };
 		81483A651B3A088500DEE874 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81483A641B3A088500DEE874 /* EditProfileViewController.swift */; };
 		815327591AD5B01C00D8D230 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815327581AD5B01C00D8D230 /* AppDelegate.swift */; };
-		8153275B1AD5B01C00D8D230 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8153275A1AD5B01C00D8D230 /* FirstViewController.swift */; };
-		8153275D1AD5B01C00D8D230 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8153275C1AD5B01C00D8D230 /* SecondViewController.swift */; };
 		815327601AD5B01C00D8D230 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8153275E1AD5B01C00D8D230 /* Main.storyboard */; };
 		815327621AD5B01C00D8D230 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815327611AD5B01C00D8D230 /* Images.xcassets */; };
 		815327651AD5B01C00D8D230 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 815327631AD5B01C00D8D230 /* LaunchScreen.xib */; };
@@ -91,7 +88,6 @@
 		810AA73B1AD5DCA100E8FF25 /* SF.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SF.jpg; sourceTree = "<group>"; };
 		810AA73D1AD6501100E8FF25 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		810AA73F1AD7741B00E8FF25 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
-		810AA7411AD78C9200E8FF25 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		810AA7431AD7995300E8FF25 /* thebay.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thebay.jpg; sourceTree = "<group>"; };
 		810AA7451AD79A8600E8FF25 /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
 		8115EFC71AF88A8000280411 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../Constants.swift; sourceTree = "<group>"; };
@@ -104,8 +100,6 @@
 		815327531AD5B01C00D8D230 /* BayAreaChess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BayAreaChess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		815327571AD5B01C00D8D230 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		815327581AD5B01C00D8D230 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8153275A1AD5B01C00D8D230 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		8153275C1AD5B01C00D8D230 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		8153275F1AD5B01C00D8D230 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		815327611AD5B01C00D8D230 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		815327641AD5B01C00D8D230 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -183,32 +177,15 @@
 				810AA73B1AD5DCA100E8FF25 /* SF.jpg */,
 				815327581AD5B01C00D8D230 /* AppDelegate.swift */,
 				8115EFC71AF88A8000280411 /* Constants.swift */,
-				8153275A1AD5B01C00D8D230 /* FirstViewController.swift */,
-				8153275C1AD5B01C00D8D230 /* SecondViewController.swift */,
 				8153275E1AD5B01C00D8D230 /* Main.storyboard */,
-				815B4F761B4F112200CFB735 /* RegistrationViewController.swift */,
-				81E2ADBB1B4624FE005DB051 /* FlyerViewController.swift */,
-				81E2ADC11B46303C005DB051 /* TournamentLocationViewController.swift */,
-				815B4F6E1B49C10300CFB735 /* TournamentLocationAnnotation.swift */,
-				810AA73D1AD6501100E8FF25 /* NavigationController.swift */,
 				815327611AD5B01C00D8D230 /* Images.xcassets */,
 				815327631AD5B01C00D8D230 /* LaunchScreen.xib */,
-				815327561AD5B01C00D8D230 /* Supporting Files */,
-				8153277A1AD5B8EA00D8D230 /* LoginViewController.swift */,
-				810AA73F1AD7741B00E8FF25 /* TextField.swift */,
-				810AA7411AD78C9200E8FF25 /* InitialViewController.swift */,
-				81291FE71AE09B4900793FC6 /* LandingViewController.swift */,
-				81291FE91AE09ECA00793FC6 /* SignUpViewController.swift */,
 				813CA8B01AF84E8000B8EA6C /* SwiftyJSON.swift */,
-				81E4B9A71AF324AF00A18621 /* TournamentsViewController.swift */,
-				81483A641B3A088500DEE874 /* EditProfileViewController.swift */,
-				819BB0891B447844002C9E2C /* TournamentInformation.swift */,
-				815B4F741B49C55C00CFB735 /* TournamentLocationViewControllerExtension.swift */,
-				819905761B5863CF00899E16 /* TournamentInformationViewControllerExtension.swift */,
-				813B1F2D1B5604C40099F440 /* TournamentTableViewCell.swift */,
-				8199056E1B56DCA000899E16 /* ProfileTableViewCell.swift */,
-				819905701B56E05600899E16 /* ProfileViewController.swift */,
-				819905781B58889E00899E16 /* AddressLabel.swift */,
+				815327561AD5B01C00D8D230 /* Supporting Files */,
+				81D054791B59E4210091875B /* Generic */,
+				81D0547A1B59E44B0091875B /* Login */,
+				81D054781B59E3DB0091875B /* Profile */,
+				81D054731B59E3B00091875B /* Tournament */,
 			);
 			path = BayAreaChess;
 			sourceTree = "<group>";
@@ -249,6 +226,52 @@
 				815B4F7E1B55CF9E00CFB735 /* monthlycalendar@2x.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		81D054731B59E3B00091875B /* Tournament */ = {
+			isa = PBXGroup;
+			children = (
+				815B4F761B4F112200CFB735 /* RegistrationViewController.swift */,
+				81E2ADBB1B4624FE005DB051 /* FlyerViewController.swift */,
+				81E2ADC11B46303C005DB051 /* TournamentLocationViewController.swift */,
+				815B4F6E1B49C10300CFB735 /* TournamentLocationAnnotation.swift */,
+				813B1F2D1B5604C40099F440 /* TournamentTableViewCell.swift */,
+				819905761B5863CF00899E16 /* TournamentInformationViewControllerExtension.swift */,
+				815B4F741B49C55C00CFB735 /* TournamentLocationViewControllerExtension.swift */,
+				819BB0891B447844002C9E2C /* TournamentInformation.swift */,
+				81E4B9A71AF324AF00A18621 /* TournamentsViewController.swift */,
+			);
+			name = Tournament;
+			sourceTree = "<group>";
+		};
+		81D054781B59E3DB0091875B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				81483A641B3A088500DEE874 /* EditProfileViewController.swift */,
+				8199056E1B56DCA000899E16 /* ProfileTableViewCell.swift */,
+				819905701B56E05600899E16 /* ProfileViewController.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		81D054791B59E4210091875B /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				819905781B58889E00899E16 /* AddressLabel.swift */,
+				810AA73D1AD6501100E8FF25 /* NavigationController.swift */,
+				810AA73F1AD7741B00E8FF25 /* TextField.swift */,
+			);
+			name = Generic;
+			sourceTree = "<group>";
+		};
+		81D0547A1B59E44B0091875B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8153277A1AD5B8EA00D8D230 /* LoginViewController.swift */,
+				81291FE71AE09B4900793FC6 /* LandingViewController.swift */,
+				81291FE91AE09ECA00793FC6 /* SignUpViewController.swift */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 		81E4BA4B1AF40D0E00A18621 /* Products */ = {
@@ -421,10 +444,8 @@
 				8153277B1AD5B8EA00D8D230 /* LoginViewController.swift in Sources */,
 				815B4F771B4F112200CFB735 /* RegistrationViewController.swift in Sources */,
 				815B4F6F1B49C10300CFB735 /* TournamentLocationAnnotation.swift in Sources */,
-				810AA7421AD78C9200E8FF25 /* InitialViewController.swift in Sources */,
 				81291FE81AE09B4900793FC6 /* LandingViewController.swift in Sources */,
 				813CA8B11AF84E8000B8EA6C /* SwiftyJSON.swift in Sources */,
-				8153275D1AD5B01C00D8D230 /* SecondViewController.swift in Sources */,
 				819905711B56E05600899E16 /* ProfileViewController.swift in Sources */,
 				81E2ADC21B46303C005DB051 /* TournamentLocationViewController.swift in Sources */,
 				815B4F751B49C55C00CFB735 /* TournamentLocationViewControllerExtension.swift in Sources */,
@@ -437,7 +458,6 @@
 				815327591AD5B01C00D8D230 /* AppDelegate.swift in Sources */,
 				819905791B58889E00899E16 /* AddressLabel.swift in Sources */,
 				819905771B5863CF00899E16 /* TournamentInformationViewControllerExtension.swift in Sources */,
-				8153275B1AD5B01C00D8D230 /* FirstViewController.swift in Sources */,
 				8115EFC81AF88A8000280411 /* Constants.swift in Sources */,
 				819BB08A1B447844002C9E2C /* TournamentInformation.swift in Sources */,
 			);

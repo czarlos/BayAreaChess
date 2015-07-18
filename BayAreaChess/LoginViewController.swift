@@ -15,14 +15,12 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        if (checkCredentials()) {
-//            self.performSegueWithIdentifier("login", sender: self)
+//            self.performSegueWithIdentifier(Constants.Segue.Login, sender: self)
 //        }
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -32,8 +30,8 @@ class LoginViewController: UIViewController {
     
     @IBAction func login(sender: UIButton) {
         let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setObject("password", forKey: userNameKeyConstant)
-        self.performSegueWithIdentifier("login", sender: self)
+        defaults.setObject(Constants.Credentials.Password, forKey: userNameKeyConstant)
+        self.performSegueWithIdentifier(Constants.Segue.Login, sender: self)
     }
     
     func checkCredentials() -> Bool {

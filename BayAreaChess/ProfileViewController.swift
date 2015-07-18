@@ -41,14 +41,14 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if (indexPath.row == 0) {
-            var cell : ProfileTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("ProfileCell") as! ProfileTableViewCell
-//            cell.userInteractionEnabled = false
+            var cell : ProfileTableViewCell = self.tableView.dequeueReusableCellWithIdentifier(Constants.Identifier.ProfileCell) as! ProfileTableViewCell
             cell.myLogoutButton.addTarget(self, action: "logout", forControlEvents: .TouchUpInside)
+            
             cell.configure("Carlos Reyes", subtitleName:"@theCzarlos", imageName: "sample.jpg")
             return cell
         }
         else {
-            var cell : TournamentTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("TournamentCell", forIndexPath: indexPath) as! TournamentTableViewCell
+            var cell : TournamentTableViewCell = self.tableView.dequeueReusableCellWithIdentifier(Constants.Identifier.TournamentCell, forIndexPath: indexPath) as! TournamentTableViewCell
             cell.configure(items[indexPath.row-1], date: dates[indexPath.row-1], imageName: "settings6.png")
             return cell
         }
@@ -57,10 +57,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if (indexPath.row == 0) {
-            return 375.0
+            return Constants.Cell.ProfileCellSize
         }
         else {
-            return 80.0
+            return Constants.Cell.TournamentCellSize
         }
     }
     
@@ -71,7 +71,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     func logout() {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.removeObjectForKey("carlos")
-        self.performSegueWithIdentifier("logout", sender: self)
+        self.performSegueWithIdentifier(Constants.Segue.Logout, sender: self)
     }
     
     

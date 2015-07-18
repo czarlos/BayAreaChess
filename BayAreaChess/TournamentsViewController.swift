@@ -32,12 +32,6 @@ class TournamentsViewController : UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.hidden = false
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 34/255, green: 94/255, blue: 158/255, alpha: 1)
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
-//        self.tabBarController?.tabBar.barTintColor = UIColor(red: 34/255, green: 94/255, blue: 158/255, alpha: 1)
-
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,23 +41,23 @@ class TournamentsViewController : UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let item: AnyObject = self.eventList[indexPath.row]
         
-        var cell : TournamentTableViewCell = tableView.dequeueReusableCellWithIdentifier("TournamentCell", forIndexPath: indexPath) as! TournamentTableViewCell
+        var cell : TournamentTableViewCell = tableView.dequeueReusableCellWithIdentifier(Constants.Identifier.TournamentCell, forIndexPath: indexPath) as! TournamentTableViewCell
         cell.configure((item as? String)!, date: self.dateList[indexPath.row], imageName: "thebay.jpg")
         
         return cell
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 80.0
+        return Constants.Cell.TournamentCellSize
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println(indexPath.row)
-        self.performSegueWithIdentifier("specificTournament", sender: self)
+        self.performSegueWithIdentifier(Constants.Segue.SpecificTournament, sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "specificTournament") {
+        if (segue.identifier == Constants.Segue.SpecificTournament) {
             let viewController : TournamentInformation = segue.destinationViewController as! TournamentInformation
             let indexPath = self.tableView.indexPathForSelectedRow()
             viewController.myIndex = indexPath!.row
@@ -94,9 +88,9 @@ class TournamentsViewController : UITableViewController {
         var dateArray : [String] = []
         for i in json.arrayValue {
             var item = i["start"]["dateTime"]
-            var formatter: NSDateFormatter = NSDateFormatter();
-            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssSSSZZZZ";
-            var date : NSDate = NSDate();
+            var formatter: NSDateFormatter = NSDateFormatter()
+            formatter.dateFormat = Constants.Date.GoogleCalendarFormat
+            var date : NSDate = NSDate()
             
             if (item.string == nil) {
                 dateArray.append("N/A")
@@ -106,11 +100,11 @@ class TournamentsViewController : UITableViewController {
                 date = formatter.dateFromString(item.string!)!
             }
             else {
-                formatter.dateFormat = "yyyy-MM-dd"
-                date = formatter.dateFromString(item.string!)!;
+                formatter.dateFormat = Constants.Date.ReverseStandard
+                date = formatter.dateFromString(item.string!)!
             }
-            formatter.dateFormat = "MM-dd-yyyy ";
-            let stringDate: String = formatter.stringFromDate(date);
+            formatter.dateFormat = Constants.Date.Standard
+            let stringDate: String = formatter.stringFromDate(date)
             dateArray.append(stringDate);
         }
         return dateArray

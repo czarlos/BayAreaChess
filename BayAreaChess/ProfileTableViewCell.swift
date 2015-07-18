@@ -15,7 +15,6 @@ class ProfileTableViewCell : UITableViewCell {
     @IBOutlet var mySubtitleName: UILabel!
     @IBOutlet var myLogoutButton : UIButton!
     
-    
     override func awakeFromNib() {
         myProfileImageView.layer.borderColor = UIColor.whiteColor().CGColor
         myProfileImageView.layer.borderWidth = 2.0

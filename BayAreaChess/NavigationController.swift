@@ -10,12 +10,13 @@ import UIKit
 
 class NavigationController : UINavigationController {
     override func viewDidLoad() {
-        let swiftColor = UIColor(red: 34/255, green: 104/255, blue: 158/255, alpha: 0.5)
-        UINavigationBar.appearance().barTintColor = swiftColor
-        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        let swiftColor : UIColor = Constants.Color.ThemeBlue
+        self.navigationBar.barTintColor = swiftColor
+        self.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
         super.viewDidLoad()
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
