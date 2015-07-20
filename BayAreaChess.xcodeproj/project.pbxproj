@@ -40,6 +40,8 @@
 		8199057B1B58BA9B00899E16 /* ios in Resources */ = {isa = PBXBuildFile; fileRef = 8199057A1B58BA9B00899E16 /* ios */; };
 		8199057D1B58C2D900899E16 /* chess_king.png in Resources */ = {isa = PBXBuildFile; fileRef = 8199057C1B58C2D900899E16 /* chess_king.png */; };
 		819BB08A1B447844002C9E2C /* TournamentInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819BB0891B447844002C9E2C /* TournamentInformation.swift */; };
+		81D0547C1B5B161D0091875B /* camera+@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D0547B1B5B161D0091875B /* camera+@2x.png */; };
+		81D0547E1B5C7C080091875B /* TournamentSubsectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D0547D1B5C7C080091875B /* TournamentSubsectionTableViewController.swift */; };
 		81E2ADBC1B4624FE005DB051 /* FlyerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E2ADBB1B4624FE005DB051 /* FlyerViewController.swift */; };
 		81E2ADC21B46303C005DB051 /* TournamentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E2ADC11B46303C005DB051 /* TournamentLocationViewController.swift */; };
 		81E4B9A81AF324AF00A18621 /* TournamentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E4B9A71AF324AF00A18621 /* TournamentsViewController.swift */; };
@@ -122,6 +124,8 @@
 		8199057A1B58BA9B00899E16 /* ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ios; path = Resources/ios; sourceTree = "<group>"; };
 		8199057C1B58C2D900899E16 /* chess_king.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chess_king.png; path = Resources/chess_king.png; sourceTree = "<group>"; };
 		819BB0891B447844002C9E2C /* TournamentInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentInformation.swift; sourceTree = "<group>"; };
+		81D0547B1B5B161D0091875B /* camera+@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera+@2x.png"; path = "../../../Downloads/free_retina_display_friendly_icons/money/camera+@2x.png"; sourceTree = "<group>"; };
+		81D0547D1B5C7C080091875B /* TournamentSubsectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentSubsectionTableViewController.swift; sourceTree = "<group>"; };
 		81E2ADBB1B4624FE005DB051 /* FlyerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlyerViewController.swift; sourceTree = "<group>"; };
 		81E2ADC11B46303C005DB051 /* TournamentLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentLocationViewController.swift; sourceTree = "<group>"; };
 		81E4B9A71AF324AF00A18621 /* TournamentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentsViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +222,7 @@
 		815B4F7C1B55CF6A00CFB735 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				81D0547B1B5B161D0091875B /* camera+@2x.png */,
 				813B1F2F1B5608A00099F440 /* star@2x.png */,
 				815B4F871B55D24A00CFB735 /* pic@2x.png */,
 				815B4F881B55D24A00CFB735 /* settings6@2x.png */,
@@ -240,6 +245,7 @@
 				815B4F741B49C55C00CFB735 /* TournamentLocationViewControllerExtension.swift */,
 				819BB0891B447844002C9E2C /* TournamentInformation.swift */,
 				81E4B9A71AF324AF00A18621 /* TournamentsViewController.swift */,
+				81D0547D1B5C7C080091875B /* TournamentSubsectionTableViewController.swift */,
 			);
 			name = Tournament;
 			sourceTree = "<group>";
@@ -419,6 +425,7 @@
 				813B1F301B5608A00099F440 /* star@2x.png in Resources */,
 				810AA7441AD7995300E8FF25 /* thebay.jpg in Resources */,
 				810AA7461AD79A8600E8FF25 /* sample.jpg in Resources */,
+				81D0547C1B5B161D0091875B /* camera+@2x.png in Resources */,
 				815B4F8A1B55D24A00CFB735 /* settings6@2x.png in Resources */,
 				815B4F7F1B55CF9E00CFB735 /* maleuser@2x.png in Resources */,
 				815327621AD5B01C00D8D230 /* Images.xcassets in Resources */,
@@ -442,6 +449,7 @@
 				813B1F2E1B5604C50099F440 /* TournamentTableViewCell.swift in Sources */,
 				81483A651B3A088500DEE874 /* EditProfileViewController.swift in Sources */,
 				8153277B1AD5B8EA00D8D230 /* LoginViewController.swift in Sources */,
+				81D0547E1B5C7C080091875B /* TournamentSubsectionTableViewController.swift in Sources */,
 				815B4F771B4F112200CFB735 /* RegistrationViewController.swift in Sources */,
 				815B4F6F1B49C10300CFB735 /* TournamentLocationAnnotation.swift in Sources */,
 				81291FE81AE09B4900793FC6 /* LandingViewController.swift in Sources */,
