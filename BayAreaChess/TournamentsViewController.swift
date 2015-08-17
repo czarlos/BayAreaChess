@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftHTTP
+import SwiftyJSON
 
 class TournamentsViewController : UITableViewController {
     
@@ -67,7 +68,7 @@ class TournamentsViewController : UITableViewController {
     
     func getTournaments() {
         var request = HTTPTask()
-        request.GET(Constants.URL.GENERAL_TOURNAMENTS, parameters: nil, success: {(response: HTTPResponse) in
+        request.GET(Constants.URL.GENERAL_TOURNAMENTS, parameters: nil, completionHandler: {(response: HTTPResponse) in
             if let data = response.responseObject as? NSData {
                 dispatch_async(dispatch_get_main_queue()) {
                     let json = JSON(data: data)
@@ -77,9 +78,7 @@ class TournamentsViewController : UITableViewController {
                     self.tableView.reloadData()
                 }
             }
-            },failure: {(error: NSError, response: HTTPResponse?) in
-                println("error: \(error)")
-        })
+            })
     }
     
     func getDateArray(json: JSON) -> [String] {

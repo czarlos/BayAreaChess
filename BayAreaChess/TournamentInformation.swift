@@ -11,6 +11,7 @@ import CoreLocation
 import MapKit
 import SwiftHTTP
 import UIKit
+import SwiftyJSON
 
 class TournamentInformation: UIViewController {
     
@@ -74,7 +75,7 @@ class TournamentInformation: UIViewController {
     
     func getTournamentData(tid: String) {
         var request = HTTPTask()
-        request.GET(Constants.URL.GENERAL_TOURNAMENTS + "/" + tid, parameters: nil, success: {(response: HTTPResponse) in
+        request.GET(Constants.URL.GENERAL_TOURNAMENTS + "/" + tid, parameters: nil, completionHandler: {(response: HTTPResponse) in
             if let data = response.responseObject as? NSData {
                 dispatch_async(dispatch_get_main_queue()) {
                     let json = JSON(data: data)
@@ -83,9 +84,7 @@ class TournamentInformation: UIViewController {
 //                    self.tableView.reloadData()
                 }
             }
-            },failure: {(error: NSError, response: HTTPResponse?) in
-                println("error: \(error)")
-        })
+            })
     }
     
     func getLocation(json: JSON) -> String {
